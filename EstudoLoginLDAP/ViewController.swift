@@ -12,18 +12,18 @@ import CoreData
  
 class ViewController: UIViewController, UITextFieldDelegate, NetworkCheckObserver
 {
-    // Campos da tela
+    // MARK: - Campos da tela
     @IBOutlet weak var txtUsuario: UITextField!
     @IBOutlet weak var btnLogin: UIButton!
     @IBOutlet weak var txtSenha: UITextField!
     @IBOutlet weak var statusLabel: UILabel!
     
-    // Variaveis
+    // MARK: - Variaveis
     var networkCheck = NetworkCheck.sharedInstance()
     var container: NSPersistentContainer!
     var usuario = [Usuario]()
     
-    // Ciclo de vida da view
+    // MARK: - Ciclo de vida da view
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -65,7 +65,7 @@ class ViewController: UIViewController, UITextFieldDelegate, NetworkCheckObserve
         networkCheck.removeObserver(observer: self)
     }
     
-    // Acao do botao Login
+    // MARK: - Acao do botao Login
     @IBAction func loginAcao(_ sender: Any)
     {
 
@@ -142,7 +142,7 @@ class ViewController: UIViewController, UITextFieldDelegate, NetworkCheckObserve
         return true;
     }
     
-    // Move a tela para mostrar o teclado
+    // MARK: - Move a tela para mostrar o teclado
     @objc func keyboardWillShow(sender: NSNotification)
     {
          self.view.frame.origin.y = -150
@@ -162,13 +162,13 @@ class ViewController: UIViewController, UITextFieldDelegate, NetworkCheckObserve
         self.present(alertView, animated: true, completion: nil)
     }
 
-    // Mantem status da conexao
+    // MARK: - Mantem status da conexao
     func statusDidChange(status: NWPath.Status)
     {
         statusLabel.text = status == .satisfied ? "Conectado" : "Desconectado"
     }
     
-    // Valida entrada de dados
+    // MARK: - Valida entrada de dados
     func validaEntrada() -> Bool
     {
         var retorno: Bool = true
@@ -186,7 +186,7 @@ class ViewController: UIViewController, UITextFieldDelegate, NetworkCheckObserve
         return retorno
     }
     
-    // Funcoes do coredata
+    // MARK: - Funcoes do coredata
     private func salvaUsuario()
     {
         let usuario = Usuario(context: PersistenceService.context)

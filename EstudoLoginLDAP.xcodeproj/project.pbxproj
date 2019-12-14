@@ -85,7 +85,6 @@
 				E1C25CB523A2CFB300129DC6 /* EstudoLoginLDAP.xcdatamodeld */,
 				E18D83022396AB48008C108E /* Info.plist */,
 				E194A4FE239E7B90006EB2AC /* ValidaLogin.swift */,
-				E194A50223A00C18006EB2AC /* Utilitarios.swift */,
 			);
 			path = EstudoLoginLDAP;
 			sourceTree = "<group>";
@@ -102,6 +101,7 @@
 		E1A556C323A118370056D2E3 /* Suporte */ = {
 			isa = PBXGroup;
 			children = (
+				E194A50223A00C18006EB2AC /* Utilitarios.swift */,
 				E1A556C423A118CF0056D2E3 /* Rede.swift */,
 				E148DF8F23A268A1000DEE79 /* Ldap.swift */,
 				E170C3C623A3A61A008ECCF8 /* PersistenceService.swift */,
