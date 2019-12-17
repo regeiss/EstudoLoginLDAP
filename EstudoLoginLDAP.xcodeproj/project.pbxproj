@@ -22,6 +22,7 @@
 		E194A50323A00C18006EB2AC /* Utilitarios.swift in Sources */ = {isa = PBXBuildFile; fileRef = E194A50223A00C18006EB2AC /* Utilitarios.swift */; };
 		E1A556C523A118CF0056D2E3 /* Rede.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A556C423A118CF0056D2E3 /* Rede.swift */; };
 		E1C25CB723A2CFB300129DC6 /* EstudoLoginLDAP.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E1C25CB523A2CFB300129DC6 /* EstudoLoginLDAP.xcdatamodeld */; };
+		E1F4FAE123A978400070CB1B /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F4FAE023A978400070CB1B /* WebService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		E194A50223A00C18006EB2AC /* Utilitarios.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilitarios.swift; sourceTree = "<group>"; };
 		E1A556C423A118CF0056D2E3 /* Rede.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rede.swift; sourceTree = "<group>"; };
 		E1C25CB623A2CFB300129DC6 /* EstudoLoginLDAP.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EstudoLoginLDAP.xcdatamodel; sourceTree = "<group>"; };
+		E1F4FAE023A978400070CB1B /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				E148DF8F23A268A1000DEE79 /* Ldap.swift */,
 				E170C3C623A3A61A008ECCF8 /* PersistenceService.swift */,
 				E170C3CC23A3F72D008ECCF8 /* HTTPClient.swift */,
+				E1F4FAE023A978400070CB1B /* WebService.swift */,
 			);
 			path = Suporte;
 			sourceTree = "<group>";
@@ -181,6 +184,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1F4FAE123A978400070CB1B /* WebService.swift in Sources */,
 				E18D82F62396AB45008C108E /* ViewController.swift in Sources */,
 				E170C3C723A3A61A008ECCF8 /* PersistenceService.swift in Sources */,
 				E194A4FF239E7B90006EB2AC /* ValidaLogin.swift in Sources */,
