@@ -49,7 +49,19 @@ class ViewController: UIViewController, UITextFieldDelegate, NetworkCheckObserve
         txtSenha.backgroundColor = UIColor.systemGray6
         txtUsuario.returnKeyType = .next
         
-        buscaUsuario()
+        //buscaUsuario()
+        // Monta menu lateral
+        let mainVC = UIViewController()
+        mainVC.view.backgroundColor = .red
+        
+        let rootController = RootViewController(mainViewController: mainVC, topNavigationLeftImage: UIImage(named: "hamburger-menu-icon"))
+        let menuVC = MenuViewController()
+        menuVC.view.backgroundColor = .green
+        
+        let drawerVC = DrawerController(rootViewController: rootController, menuController: menuVC)
+        self.addChild(drawerVC)
+        view.addSubview(drawerVC.view)
+        drawerVC.didMove(toParent: self)
     }
 
     override func viewWillAppear(_ animated: Bool)
