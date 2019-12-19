@@ -49,19 +49,19 @@ class ViewController: UIViewController, UITextFieldDelegate, NetworkCheckObserve
         txtSenha.backgroundColor = UIColor.systemGray6
         txtUsuario.returnKeyType = .next
         
-        //buscaUsuario()
-        // Monta menu lateral
-        let mainVC = UIViewController()
-        mainVC.view.backgroundColor = .red
-        
-        let rootController = RootViewController(mainViewController: mainVC, topNavigationLeftImage: UIImage(named: "hamburger-menu-icon"))
-        let menuVC = MenuViewController()
-        menuVC.view.backgroundColor = .green
-        
-        let drawerVC = DrawerController(rootViewController: rootController, menuController: menuVC)
-        self.addChild(drawerVC)
-        view.addSubview(drawerVC.view)
-        drawerVC.didMove(toParent: self)
+        buscaUsuario()
+//         Monta menu lateral
+//        let mainVC = UIViewController()
+//        //mainVC.view.backgroundColor = .red
+//
+//        let rootController = RootViewController(mainViewController: mainVC, topNavigationLeftImage: UIImage(named: "hamburger-menu-icon"))
+//        let menuVC = MenuViewController()
+//        menuVC.view.backgroundColor = .green
+//
+//        let drawerVC = DrawerController(rootViewController: rootController, menuController: menuVC)
+//        self.addChild(drawerVC)
+//        view.addSubview(drawerVC.view)
+//        drawerVC.didMove(toParent: self)
     }
 
     override func viewWillAppear(_ animated: Bool)
@@ -221,8 +221,13 @@ class ViewController: UIViewController, UITextFieldDelegate, NetworkCheckObserve
             
             let usuario = try PersistenceService.context.fetch(fetchRequest)
             self.usuario = usuario
-            print(self.usuario[0].nome! + " " + self.usuario[0].senha! + " " + self.usuario[0].email!)
-            print(formatoData.string(from: self.usuario[0].dataUltimoLogin!))
+            if self.usuario.count > 0
+            {
+                for elemento in self.usuario
+                {
+                    print(elemento.nome! + " " + elemento.senha! + " " + elemento.email!)
+                }
+            }
         }
         catch
         {

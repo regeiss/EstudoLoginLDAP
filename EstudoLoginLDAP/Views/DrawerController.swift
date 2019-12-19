@@ -16,24 +16,28 @@
 
 import UIKit
 
-class DrawerController: UIViewController, RootViewControllerDelegate {
+class DrawerController: UIViewController, RootViewControllerDelegate
+{
   var rootViewController: RootViewController
   var menuController: MenuViewController
   var isMenuExpanded: Bool = false
   let overlayView = UIView()
   
-  init(rootViewController: RootViewController, menuController: MenuViewController) {
+  init(rootViewController: RootViewController, menuController: MenuViewController)
+  {
     self.rootViewController = rootViewController
     self.menuController = menuController
     super.init(nibName: nil, bundle: nil)
     self.rootViewController.drawerDelegate = self
   }
   
-  required public init?(coder aDecoder: NSCoder) {
+  required public init?(coder aDecoder: NSCoder)
+  {
     fatalError("init(coder:) has not been implemented")
   }
   
-  override func viewDidLoad() {
+  override func viewDidLoad()
+  {
     super.viewDidLoad()
     
     self.addChild(rootViewController)
@@ -52,14 +56,16 @@ class DrawerController: UIViewController, RootViewControllerDelegate {
     configureGestures()
   }
   
-  override func viewDidLayoutSubviews() {
+  override func viewDidLayoutSubviews()
+  {
     super.viewDidLayoutSubviews()
     overlayView.frame = view.bounds
     let width: CGFloat = (isMenuExpanded) ? view.bounds.width * 2 / 3 : 0.0
     self.menuController.view.frame = CGRect(x: 0, y: 0, width: width , height: self.view.bounds.height)
   }
   
-  func toggleMenu() {
+  func toggleMenu()
+  {
     isMenuExpanded = !isMenuExpanded
     let bounds = self.view.bounds
     let width: CGFloat = (isMenuExpanded) ? bounds.width * 2 / 3 : 0.0
@@ -71,12 +77,14 @@ class DrawerController: UIViewController, RootViewControllerDelegate {
     }
   }
   
-  func navigateTo(viewController: UIViewController) {
+  func navigateTo(viewController: UIViewController)
+  {
     rootViewController.setViewControllers([viewController], animated: true)
     self.toggleMenu()
   }
   
-  fileprivate func configureGestures() {
+  fileprivate func configureGestures()
+  {
     let swipeLeftGesture = UISwipeGestureRecognizer(target: self, action: #selector(didSwipeLeft))
     swipeLeftGesture.direction = .left
     overlayView.addGestureRecognizer(swipeLeftGesture)
@@ -85,17 +93,21 @@ class DrawerController: UIViewController, RootViewControllerDelegate {
     overlayView.addGestureRecognizer(tapGesture)
   }
   
-  @objc fileprivate func didSwipeLeft() {
+  @objc fileprivate func didSwipeLeft()
+  {
     toggleMenu()
   }
   
-  @objc fileprivate func didTapOverlay() {
+  @objc fileprivate func didTapOverlay()
+  {
     toggleMenu()
   }
 }
 
-extension DrawerController {
-  func rootViewControllerDidTapMenuButton(_ rootViewController: RootViewController) {
+extension DrawerController
+{
+  func rootViewControllerDidTapMenuButton(_ rootViewController: RootViewController)
+  {
     toggleMenu()
   }
 }

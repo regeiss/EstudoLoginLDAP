@@ -16,51 +16,63 @@
 
 import UIKit
 
-protocol RootViewControllerDelegate: class {
+protocol RootViewControllerDelegate: class
+{
     func rootViewControllerDidTapMenuButton(_ rootViewController: RootViewController)
 }
 
-class RootViewController: UINavigationController, UINavigationControllerDelegate {
+class RootViewController: UINavigationController, UINavigationControllerDelegate
+{
     fileprivate var menuButton: UIBarButtonItem!
     fileprivate var topNavigationLeftImage: UIImage?
     weak var drawerDelegate: RootViewControllerDelegate?
 
-    public init(mainViewController: UIViewController, topNavigationLeftImage: UIImage?) {
+    public init(mainViewController: UIViewController, topNavigationLeftImage: UIImage?)
+    {
         super.init(rootViewController: mainViewController)
         self.topNavigationLeftImage = topNavigationLeftImage
         menuButton = UIBarButtonItem(image: topNavigationLeftImage, style: .plain, target: self, action: #selector(handleMenuButton))
     }
 
-    public override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+    public override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?)
+    {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
     }
 
-    required public init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder)
+    {
         fatalError("init(coder:) has not been implemented")
     }
 
-    override public func viewDidLoad() {
+    override public func viewDidLoad()
+    {
         super.viewDidLoad()
         self.delegate = self
     }
 
-    public func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
+    public func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool)
+    {
         prepareNavigationBar()
     }
 }
 
-extension RootViewController {
-    fileprivate func prepareNavigationBar() {
+extension RootViewController
+{
+    fileprivate func prepareNavigationBar()
+    {
         topViewController?.navigationItem.title = topViewController?.title
-        if self.viewControllers.count <= 1 {
+        if self.viewControllers.count <= 1
+        {
             topViewController?.navigationItem.leftBarButtonItem = menuButton
         }
     }
 }
 
-extension RootViewController {
+extension RootViewController
+{
     @objc
-    fileprivate func handleMenuButton() {
+    fileprivate func handleMenuButton()
+    {
         drawerDelegate?.rootViewControllerDidTapMenuButton(self)
     }
 }
