@@ -4,9 +4,6 @@
 //
 //  Created by Roberto Edgar Geiss on 18/12/19.
 //  Copyright © 2019 Roberto Edgar Geiss. All rights reserved.
-//
-
-//
 //  DrawerController.swift
 //  iosapptemplates.com
 //

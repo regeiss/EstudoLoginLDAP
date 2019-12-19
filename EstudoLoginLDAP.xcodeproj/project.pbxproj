@@ -26,6 +26,7 @@
 		E1F4FAE423AA57760070CB1B /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F4FAE323AA57760070CB1B /* RootViewController.swift */; };
 		E1F4FAE623AA57D90070CB1B /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F4FAE523AA57D90070CB1B /* MenuViewController.swift */; };
 		E1F4FAE823AA58130070CB1B /* DrawerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F4FAE723AA58130070CB1B /* DrawerController.swift */; };
+		E1F4FAEA23ABBAD40070CB1B /* TelaAjudaVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F4FAE923ABBAD40070CB1B /* TelaAjudaVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		E1F4FAE323AA57760070CB1B /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		E1F4FAE523AA57D90070CB1B /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		E1F4FAE723AA58130070CB1B /* DrawerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawerController.swift; sourceTree = "<group>"; };
+		E1F4FAE923ABBAD40070CB1B /* TelaAjudaVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelaAjudaVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +128,7 @@
 				E1F4FAE323AA57760070CB1B /* RootViewController.swift */,
 				E1F4FAE523AA57D90070CB1B /* MenuViewController.swift */,
 				E1F4FAE723AA58130070CB1B /* DrawerController.swift */,
+				E1F4FAE923ABBAD40070CB1B /* TelaAjudaVC.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -202,6 +205,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1F4FAE123A978400070CB1B /* WebService.swift in Sources */,
+				E1F4FAEA23ABBAD40070CB1B /* TelaAjudaVC.swift in Sources */,
 				E1F4FAE623AA57D90070CB1B /* MenuViewController.swift in Sources */,
 				E18D82F62396AB45008C108E /* ViewController.swift in Sources */,
 				E170C3C723A3A61A008ECCF8 /* PersistenceService.swift in Sources */,

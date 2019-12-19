@@ -28,28 +28,7 @@ class ViewController: UIViewController, UITextFieldDelegate, NetworkCheckObserve
     {
         super.viewDidLoad()
 
-        // Notificacao para mover o teclado.
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(sender:)), name: UIResponder.keyboardWillShowNotification, object: nil);
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(sender:)), name: UIResponder.keyboardWillHideNotification, object: nil);
-        
-        // Ajustes dos delegates
-        txtUsuario.delegate = self
-        txtSenha.delegate = self
-        
-        // Ajustes do botao
-        btnLogin.layer.cornerRadius = 10
-        btnLogin.clipsToBounds = true
-        btnLogin.backgroundColor = UIColor.systemGray
-        btnLogin.titleLabel?.textColor =  UIColor.systemYellow
-        
-        // Comportamento dos campos
-        txtUsuario.borderStyle = .roundedRect
-        txtUsuario.backgroundColor = UIColor.systemGray6
-        txtSenha.borderStyle = .roundedRect
-        txtSenha.backgroundColor = UIColor.systemGray6
-        txtUsuario.returnKeyType = .next
-        
-        buscaUsuario()
+        InicializaViewLogin()
 //         Monta menu lateral
 //        let mainVC = UIViewController()
 //        //mainVC.view.backgroundColor = .red
@@ -77,10 +56,34 @@ class ViewController: UIViewController, UITextFieldDelegate, NetworkCheckObserve
         networkCheck.removeObserver(observer: self)
     }
     
-    // MARK: - Acao do botao Login
+    fileprivate func InicializaViewLogin()
+    {
+        // Notificacao para mover o teclado.
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(sender:)), name: UIResponder.keyboardWillShowNotification, object: nil);
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(sender:)), name: UIResponder.keyboardWillHideNotification, object: nil);
+        
+        // Ajustes dos delegates
+        txtUsuario.delegate = self
+        txtSenha.delegate = self
+        
+        // Ajustes do botao
+        btnLogin.layer.cornerRadius = 10
+        btnLogin.clipsToBounds = true
+        btnLogin.backgroundColor = UIColor.systemGray
+        btnLogin.titleLabel?.textColor =  UIColor.systemYellow
+        
+        // Comportamento dos campos
+        txtUsuario.borderStyle = .roundedRect
+        txtUsuario.backgroundColor = UIColor.systemGray6
+        txtSenha.borderStyle = .roundedRect
+        txtSenha.backgroundColor = UIColor.systemGray6
+        txtUsuario.returnKeyType = .next
+        
+        buscaUsuario()
+    }
+    // MARK: - Acaos dos botoes
     @IBAction func loginAcao(_ sender: Any)
     {
-
         if validaEntrada()
         {
             salvaUsuario()
@@ -90,10 +93,14 @@ class ViewController: UIViewController, UITextFieldDelegate, NetworkCheckObserve
     
     @IBAction func btnAjuda(_ sender: Any)
     {
-        displayErrorMessage(title: "Ajuda", message: "Ajuda da aplicação")
+//        displayErrorMessage(title: "Ajuda", message: "Ajuda da aplicação")
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let TelaAjudaVC = storyBoard.instantiateViewController(identifier: "TelaAjuda") as! TelaAjudaVC
+        self.present(TelaAjudaVC, animated: true, completion: nil)
+            //.instantiateInitialViewController(withIdentifier: "TelaAjudaVC")
     }
     
-    // UITextField Delegates
+    // MARK: - UITextField Delegates
     func textFieldDidBeginEditing(_ textField: UITextField)
     {
         print("TextField did begin editing method called")
@@ -234,5 +241,16 @@ class ViewController: UIViewController, UITextFieldDelegate, NetworkCheckObserve
             // verificacao de erros aqui
             print("Ocorreu um erro de core data")
         }
+    }
+}
+
+extension UIView
+{
+    func pinToEdges(to other: UIView)
+    {
+        leadingAnchor.constraint(equalTo: other.leadingAnchor).isActive = true
+        trailingAnchor.constraint(equalTo: other.trailingAnchor).isActive = true
+        topAnchor.constraint(equalTo: other.topAnchor).isActive = true
+        bottomAnchor.constraint(equalTo: other.bottomAnchor).isActive = true
     }
 }
