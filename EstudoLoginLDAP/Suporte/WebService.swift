@@ -12,7 +12,6 @@ class AcessoWS
 {
     func teste()
     {
-        
         let apiKey = "5a55c163db824179819ef6d1b167c342"
         let url = URL(string: "https://desenv-ws.novohamburgo.rs.gov.br/index.php/api/Memo/buscaSecretarias/")!
         var request = URLRequest(url: url)

@@ -93,11 +93,9 @@ class ViewController: UIViewController, UITextFieldDelegate, NetworkCheckObserve
     
     @IBAction func btnAjuda(_ sender: Any)
     {
-//        displayErrorMessage(title: "Ajuda", message: "Ajuda da aplicação")
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let TelaAjudaVC = storyBoard.instantiateViewController(identifier: "TelaAjuda") as! TelaAjudaVC
         self.present(TelaAjudaVC, animated: true, completion: nil)
-            //.instantiateInitialViewController(withIdentifier: "TelaAjudaVC")
     }
     
     // MARK: - UITextField Delegates
