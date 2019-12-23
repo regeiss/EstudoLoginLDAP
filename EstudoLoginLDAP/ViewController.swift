@@ -12,6 +12,7 @@ import CoreData
  
 class ViewController: UIViewController, UITextFieldDelegate, NetworkCheckObserver
 {
+    @IBOutlet weak var sideMenuConstraint: NSLayoutConstraint!
     // MARK: - Campos da tela
     @IBOutlet weak var txtUsuario: UITextField!
     @IBOutlet weak var btnLogin: UIButton!
@@ -22,6 +23,7 @@ class ViewController: UIViewController, UITextFieldDelegate, NetworkCheckObserve
     var networkCheck = NetworkCheck.sharedInstance()
     var container: NSPersistentContainer!
     var usuario = [Usuario]()
+    var sideMenuOpen = false
     
     // MARK: - Ciclo de vida da view
     override func viewDidLoad()
@@ -29,18 +31,8 @@ class ViewController: UIViewController, UITextFieldDelegate, NetworkCheckObserve
         super.viewDidLoad()
 
         InicializaViewLogin()
-//         Monta menu lateral
-//        let mainVC = UIViewController()
-//        //mainVC.view.backgroundColor = .red
-//
-//        let rootController = RootViewController(mainViewController: mainVC, topNavigationLeftImage: UIImage(named: "hamburger-menu-icon"))
-//        let menuVC = MenuViewController()
-//        menuVC.view.backgroundColor = .green
-//
-//        let drawerVC = DrawerController(rootViewController: rootController, menuController: menuVC)
-//        self.addChild(drawerVC)
-//        view.addSubview(drawerVC.view)
-//        drawerVC.didMove(toParent: self)
+
+        NotificationCenter.default.addObserver(self, selector: #selector(toggleSideMenu), name: NSNotification.Name("ToggleSideMenu"), object: nil)
     }
 
     override func viewWillAppear(_ animated: Bool)
@@ -98,6 +90,12 @@ class ViewController: UIViewController, UITextFieldDelegate, NetworkCheckObserve
         self.present(TelaAjudaVC, animated: true, completion: nil)
     }
     
+    @IBAction func onMoreTapped()
+    {
+           print("TOGGLE SIDE MENU")
+           NotificationCenter.default.post(name: NSNotification.Name("ToggleSideMenu"), object: nil)
+       }
+
     // MARK: - UITextField Delegates
     func textFieldDidBeginEditing(_ textField: UITextField)
     {
@@ -201,6 +199,22 @@ class ViewController: UIViewController, UITextFieldDelegate, NetworkCheckObserve
             retorno = false
         }
         return retorno
+    }
+    
+    // MARK: - SideMenu
+    @objc func toggleSideMenu()
+    {
+        if sideMenuOpen {
+            sideMenuOpen = false
+            sideMenuConstraint.constant = -240
+            
+        } else {
+            sideMenuOpen = true
+            sideMenuConstraint.constant = 0
+        }
+        UIView.animate(withDuration: 0.3) {
+            self.view.layoutIfNeeded()
+        }
     }
     
     // MARK: - Funcoes do coredata
