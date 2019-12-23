@@ -94,7 +94,7 @@ class ViewController: UIViewController, UITextFieldDelegate, NetworkCheckObserve
     @IBAction func btnAjuda(_ sender: Any)
     {
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let TelaAjudaVC = storyBoard.instantiateViewController(identifier: "TelaAjuda") as! TelaAjudaVC
+        let TelaAjudaVC = storyBoard.instantiateViewController(identifier: "TelaAjudaVC") as! TelaAjudaVC
         self.present(TelaAjudaVC, animated: true, completion: nil)
     }
     

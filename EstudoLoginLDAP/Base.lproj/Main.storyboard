@@ -10,7 +10,7 @@
         <!--TelaAjuda-->
         <scene sceneID="cHj-uY-61M">
             <objects>
-                <viewController storyboardIdentifier="TelaAjuda" title="Ajuda" useStoryboardIdentifierAsRestorationIdentifier="YES" id="qPw-zd-3ed" userLabel="TelaAjuda" customClass="TelaAjudaVC" customModule="EstudoLoginLDAP" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TelaAjudaVC" title="Ajuda" useStoryboardIdentifierAsRestorationIdentifier="YES" id="qPw-zd-3ed" userLabel="TelaAjuda" customClass="TelaAjudaVC" customModule="EstudoLoginLDAP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="x0W-ni-5XM" customClass="TelaAjuda">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

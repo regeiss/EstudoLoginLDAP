@@ -14,12 +14,13 @@ class TelaAjudaVC: UIViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
-
+        showIndicator(withTitle: "Hud", and: "Teste")
         // Do any additional setup after loading the view.
     }
     
     @IBAction func btnOK(_ sender: Any)
     {
+        hideIndicator()
         self.dismiss(animated: true, completion: nil)
     }
     

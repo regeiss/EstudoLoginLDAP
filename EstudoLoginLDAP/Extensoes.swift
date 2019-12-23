@@ -13,7 +13,8 @@ import QuartzCore
 
 extension UIViewController
 {
-   func showIndicator(withTitle title: String, and Description:String) {
+   func showIndicator(withTitle title: String, and Description: String)
+   {
       let Indicator = MBProgressHUD.showAdded(to: self.view, animated: true)
       Indicator.label.text = title
       Indicator.isUserInteractionEnabled = false
