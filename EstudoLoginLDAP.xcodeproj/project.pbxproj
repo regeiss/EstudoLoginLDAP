@@ -27,7 +27,6 @@
 		E1F4FAEA23ABBAD40070CB1B /* TelaAjudaVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F4FAE923ABBAD40070CB1B /* TelaAjudaVC.swift */; };
 		E1F4FAED23AD30970070CB1B /* Extensoes.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F4FAEC23AD30970070CB1B /* Extensoes.swift */; };
 		E1F4FAEF23B1264B0070CB1B /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F4FAEE23B1264B0070CB1B /* NetworkService.swift */; };
-		E1F4FAF123B12CDB0070CB1B /* SideMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F4FAF023B12CDB0070CB1B /* SideMenuVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,7 +53,6 @@
 		E1F4FAE923ABBAD40070CB1B /* TelaAjudaVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelaAjudaVC.swift; sourceTree = "<group>"; };
 		E1F4FAEC23AD30970070CB1B /* Extensoes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensoes.swift; sourceTree = "<group>"; };
 		E1F4FAEE23B1264B0070CB1B /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
-		E1F4FAF023B12CDB0070CB1B /* SideMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuVC.swift; sourceTree = "<group>"; };
 		E62F3900B3866C5A669481C1 /* Pods-EstudoLoginLDAP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EstudoLoginLDAP.debug.xcconfig"; path = "Target Support Files/Pods-EstudoLoginLDAP/Pods-EstudoLoginLDAP.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -100,6 +98,7 @@
 		E18D82F02396AB45008C108E /* EstudoLoginLDAP */ = {
 			isa = PBXGroup;
 			children = (
+				E1F4FAF223B267F90070CB1B /* Rede */,
 				E1F4FAEB23AD04680070CB1B /* LDAP */,
 				E1F4FAE223AA558B0070CB1B /* Views */,
 				E1A556C323A118370056D2E3 /* Suporte */,
@@ -131,11 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				E194A50223A00C18006EB2AC /* Utilitarios.swift */,
-				E1A556C423A118CF0056D2E3 /* Rede.swift */,
 				E170C3C623A3A61A008ECCF8 /* PersistenceService.swift */,
-				E170C3CC23A3F72D008ECCF8 /* HTTPClient.swift */,
-				E1F4FAE023A978400070CB1B /* WebService.swift */,
-				E1F4FAEE23B1264B0070CB1B /* NetworkService.swift */,
 			);
 			path = Suporte;
 			sourceTree = "<group>";
@@ -144,7 +139,6 @@
 			isa = PBXGroup;
 			children = (
 				E1F4FAE923ABBAD40070CB1B /* TelaAjudaVC.swift */,
-				E1F4FAF023B12CDB0070CB1B /* SideMenuVC.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -155,6 +149,17 @@
 				E148DF8F23A268A1000DEE79 /* Ldap.swift */,
 			);
 			path = LDAP;
+			sourceTree = "<group>";
+		};
+		E1F4FAF223B267F90070CB1B /* Rede */ = {
+			isa = PBXGroup;
+			children = (
+				E1F4FAE023A978400070CB1B /* WebService.swift */,
+				E170C3CC23A3F72D008ECCF8 /* HTTPClient.swift */,
+				E1A556C423A118CF0056D2E3 /* Rede.swift */,
+				E1F4FAEE23B1264B0070CB1B /* NetworkService.swift */,
+			);
+			path = Rede;
 			sourceTree = "<group>";
 		};
 		F459E9024132A2445107CCD1 /* Frameworks */ = {
@@ -294,7 +299,6 @@
 				E1F4FAED23AD30970070CB1B /* Extensoes.swift in Sources */,
 				E1F4FAEF23B1264B0070CB1B /* NetworkService.swift in Sources */,
 				E18D82F22396AB45008C108E /* AppDelegate.swift in Sources */,
-				E1F4FAF123B12CDB0070CB1B /* SideMenuVC.swift in Sources */,
 				E1A556C523A118CF0056D2E3 /* Rede.swift in Sources */,
 				E18D82F42396AB45008C108E /* SceneDelegate.swift in Sources */,
 			);
