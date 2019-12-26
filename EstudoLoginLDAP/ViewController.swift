@@ -12,7 +12,7 @@ import CoreData
  
 class ViewController: UIViewController, UITextFieldDelegate, NetworkCheckObserver
 {
-    @IBOutlet weak var sideMenuConstraint: NSLayoutConstraint!
+
     // MARK: - Campos da tela
     @IBOutlet weak var txtUsuario: UITextField!
     @IBOutlet weak var btnLogin: UIButton!
@@ -23,16 +23,15 @@ class ViewController: UIViewController, UITextFieldDelegate, NetworkCheckObserve
     var networkCheck = NetworkCheck.sharedInstance()
     var container: NSPersistentContainer!
     var usuario = [Usuario]()
-    var sideMenuOpen = false
-    
+    let transiton = SlideInTransition()
+    var topView: UIView?
+
     // MARK: - Ciclo de vida da view
     override func viewDidLoad()
     {
         super.viewDidLoad()
 
         InicializaViewLogin()
-
-        NotificationCenter.default.addObserver(self, selector: #selector(toggleSideMenu), name: NSNotification.Name("ToggleSideMenu"), object: nil)
     }
 
     override func viewWillAppear(_ animated: Bool)
@@ -89,13 +88,16 @@ class ViewController: UIViewController, UITextFieldDelegate, NetworkCheckObserve
         let TelaAjudaVC = storyBoard.instantiateViewController(identifier: "TelaAjudaVC") as! TelaAjudaVC
         self.present(TelaAjudaVC, animated: true, completion: nil)
     }
-    
-    @IBAction func onMoreTapped()
-    {
-           print("TOGGLE SIDE MENU")
-           NotificationCenter.default.post(name: NSNotification.Name("ToggleSideMenu"), object: nil)
-       }
 
+    @IBAction func didTapMenu(_ sender: UIBarButtonItem)
+    {
+        guard let menuViewController = storyboard?.instantiateViewController(withIdentifier: "MenuTableViewController") as? MenuTableViewController
+            else { return }
+         menuViewController.didTapMenuType = { menuType in self.transitionToNew(menuType)}
+         menuViewController.modalPresentationStyle = .overCurrentContext
+         menuViewController.transitioningDelegate = self
+         present(menuViewController, animated: true)
+    }
     // MARK: - UITextField Delegates
     func textFieldDidBeginEditing(_ textField: UITextField)
     {
@@ -202,21 +204,30 @@ class ViewController: UIViewController, UITextFieldDelegate, NetworkCheckObserve
     }
     
     // MARK: - SideMenu
-    @objc func toggleSideMenu()
+    func transitionToNew(_ menuType: MenuType)
     {
-        if sideMenuOpen {
-            sideMenuOpen = false
-            sideMenuConstraint.constant = -240
-            
-        } else {
-            sideMenuOpen = true
-            sideMenuConstraint.constant = 0
-        }
-        UIView.animate(withDuration: 0.3) {
-            self.view.layoutIfNeeded()
+        let title = String(describing: menuType).capitalized
+        self.title = title
+
+        topView?.removeFromSuperview()
+        switch menuType {
+        case .perfil:
+            let view = UIView()
+            view.backgroundColor = .yellow
+            view.frame = self.view.bounds
+            self.view.addSubview(view)
+            self.topView = view
+        case .ajuda:
+            let view = UIView()
+            view.backgroundColor = .blue
+            view.frame = self.view.bounds
+            self.view.addSubview(view)
+            self.topView = view
+        default:
+            break
         }
     }
-    
+
     // MARK: - Funcoes do coredata
     private func salvaUsuario()
     {
@@ -256,13 +267,19 @@ class ViewController: UIViewController, UITextFieldDelegate, NetworkCheckObserve
     }
 }
 
-extension UIView
+// MARK: - Extensoes
+extension ViewController: UIViewControllerTransitioningDelegate
 {
-    func pinToEdges(to other: UIView)
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning?
     {
-        leadingAnchor.constraint(equalTo: other.leadingAnchor).isActive = true
-        trailingAnchor.constraint(equalTo: other.trailingAnchor).isActive = true
-        topAnchor.constraint(equalTo: other.topAnchor).isActive = true
-        bottomAnchor.constraint(equalTo: other.bottomAnchor).isActive = true
+        transiton.isPresenting = true
+        return transiton
+    }
+
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning?
+    {
+        transiton.isPresenting = false
+        return transiton
     }
 }
+
