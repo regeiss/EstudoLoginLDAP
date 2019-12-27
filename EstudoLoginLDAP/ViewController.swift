@@ -85,13 +85,13 @@ class ViewController: UIViewController, UITextFieldDelegate, NetworkCheckObserve
     @IBAction func btnAjuda(_ sender: Any)
     {
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let TelaAjudaVC = storyBoard.instantiateViewController(identifier: "TelaAjudaVC") as! TelaAjudaVC
+        let TelaAjudaVC = storyBoard.instantiateViewController(identifier: "TelaAjudaVC") as! AjudaVC
         self.present(TelaAjudaVC, animated: true, completion: nil)
     }
 
     @IBAction func didTapMenu(_ sender: UIBarButtonItem)
     {
-        guard let menuViewController = storyboard?.instantiateViewController(withIdentifier: "MenuTableViewController") as? MenuTableViewController
+        guard let menuViewController = storyboard?.instantiateViewController(withIdentifier: "MenuTableViewController") as? SideMenuTVC
             else { return }
          menuViewController.didTapMenuType = { menuType in self.transitionToNew(menuType)}
          menuViewController.modalPresentationStyle = .overCurrentContext
@@ -212,17 +212,16 @@ class ViewController: UIViewController, UITextFieldDelegate, NetworkCheckObserve
         topView?.removeFromSuperview()
         switch menuType {
         case .perfil:
-            let view = UIView()
-            view.backgroundColor = .yellow
-            view.frame = self.view.bounds
-            self.view.addSubview(view)
-            self.topView = view
+            guard let viewVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "PerfilVC") as? PerfilVC
+                else {return}
+                navigationController?.pushViewController(viewVC, animated: true)
+
+            
         case .ajuda:
-            let view = UIView()
-            view.backgroundColor = .blue
-            view.frame = self.view.bounds
-            self.view.addSubview(view)
-            self.topView = view
+            guard let viewVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TelaAjuda") as? AjudaVC
+                else {return}
+                navigationController?.pushViewController(viewVC, animated: true)
+
         default:
             break
         }

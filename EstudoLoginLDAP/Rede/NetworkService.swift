@@ -16,14 +16,14 @@
 
 import Foundation
 
-enum MyResult<T, E: Error> {
-    
+enum MyResult<T, E: Error>
+{
     case success(T)
     case failure(E)
 }
 
-class NetworkingService {
-    
+class NetworkingService
+{
     let baseUrl = "https://kiloloco.herokuapp.com/api"
     
 //    func handleResponse(for request: URLRequest,
@@ -137,11 +137,10 @@ class NetworkingService {
 //
 //        handleResponse(for: request, completion: completion)
 //    }
-    
-    
 }
 
-enum NetworkingError: Error {
+enum NetworkingError: Error
+{
     case badUrl
     case badResponse
     case badEncoding

@@ -16,7 +16,7 @@ enum MenuType: Int
     case ajuda
 }
 
-class MenuTableViewController: UITableViewController
+class SideMenuTVC: UITableViewController
 {
     var didTapMenuType: ((MenuType) -> Void)?
     override func viewDidLoad()

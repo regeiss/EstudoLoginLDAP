@@ -7,50 +7,86 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--TelaAjuda-->
+        <!--AjudaVC-->
         <scene sceneID="cHj-uY-61M">
             <objects>
-                <viewController storyboardIdentifier="TelaAjuda" title="Ajuda" id="qPw-zd-3ed" userLabel="TelaAjuda" customClass="TelaAjudaVC" customModule="EstudoLoginLDAP" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="x0W-ni-5XM" userLabel="TelaAjudaView" customClass="TelaAjuda">
+                <viewController storyboardIdentifier="AjudaVC" title="Ajuda" id="qPw-zd-3ed" userLabel="AjudaVC" customClass="AjudaVC" customModule="EstudoLoginLDAP" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="x0W-ni-5XM" userLabel="View" customClass="TelaAjuda">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tela de ajuda" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fLi-zc-1eN">
-                                <rect key="frame" x="92.5" y="313" width="190" height="41"/>
+                                <rect key="frame" x="92.5" y="518" width="190" height="41"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jm7-Yi-1FV">
-                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <items>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="wvD-BI-LBn"/>
-                                    <barButtonItem title="Ok" id="VFM-Wv-8i9">
-                                        <connections>
-                                            <action selector="btnOK:" destination="qPw-zd-3ed" id="HOq-AJ-ZLr"/>
-                                        </connections>
-                                    </barButtonItem>
-                                </items>
-                                <color key="barTintColor" cocoaTouchSystemColor="lightTextColor"/>
-                            </toolbar>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="questionmark.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="3lQ-Ek-S2n">
+                                <rect key="frame" x="67.5" y="202" width="240" height="263"/>
+                                <color key="tintColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="ACR-1j-t2F"/>
+                                    <constraint firstAttribute="height" constant="264" id="Rue-N3-lfy"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="fLi-zc-1eN" firstAttribute="centerX" secondItem="x0W-ni-5XM" secondAttribute="centerX" id="5ep-Om-tng"/>
-                            <constraint firstItem="fLi-zc-1eN" firstAttribute="centerY" secondItem="x0W-ni-5XM" secondAttribute="centerY" id="vjt-eh-mUv"/>
+                            <constraint firstItem="3lQ-Ek-S2n" firstAttribute="centerX" secondItem="x0W-ni-5XM" secondAttribute="centerX" id="71U-cg-Xyg"/>
+                            <constraint firstItem="3lQ-Ek-S2n" firstAttribute="centerY" secondItem="x0W-ni-5XM" secondAttribute="centerY" id="KH5-WH-MZe"/>
+                            <constraint firstItem="JP7-jG-Coa" firstAttribute="bottom" secondItem="fLi-zc-1eN" secondAttribute="bottom" constant="108" id="fvZ-JS-OrG"/>
+                            <constraint firstItem="3lQ-Ek-S2n" firstAttribute="centerX" secondItem="x0W-ni-5XM" secondAttribute="centerX" id="sXX-Sb-Nsu"/>
+                            <constraint firstItem="3lQ-Ek-S2n" firstAttribute="centerY" secondItem="x0W-ni-5XM" secondAttribute="centerY" id="v18-y9-O37"/>
+                            <constraint firstItem="fLi-zc-1eN" firstAttribute="centerX" secondItem="x0W-ni-5XM" secondAttribute="centerX" id="x61-wY-7H8"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="JP7-jG-Coa"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DZ2-YA-b32" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137" y="-621"/>
+            <point key="canvasLocation" x="1833" y="-621"/>
         </scene>
-        <!--Menu Table View Controller-->
+        <!--PerfilVC-->
+        <scene sceneID="nPO-fz-2JL">
+            <objects>
+                <viewController storyboardIdentifier="PerfilVC" title="Perfil" id="XWQ-st-1cW" userLabel="PerfilVC" customClass="PerfilVC" customModule="EstudoLoginLDAP" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5IA-yr-fo5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="QTh-YS-mO9">
+                                <rect key="frame" x="67.5" y="202" width="240" height="263"/>
+                                <color key="tintColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="264" id="7Dp-tq-fBK"/>
+                                    <constraint firstAttribute="width" constant="240" id="L3n-a6-B1a"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tela de perfil" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xBK-yl-9QW">
+                                <rect key="frame" x="95.5" y="520" width="184" height="41"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="xBK-yl-9QW" firstAttribute="centerX" secondItem="5IA-yr-fo5" secondAttribute="centerX" id="Be3-sy-nw1"/>
+                            <constraint firstItem="xTs-Sc-U3h" firstAttribute="bottom" secondItem="xBK-yl-9QW" secondAttribute="bottom" constant="106" id="dP4-wQ-O4K"/>
+                            <constraint firstItem="QTh-YS-mO9" firstAttribute="centerY" secondItem="5IA-yr-fo5" secondAttribute="centerY" id="sQg-GC-F29"/>
+                            <constraint firstItem="QTh-YS-mO9" firstAttribute="centerX" secondItem="5IA-yr-fo5" secondAttribute="centerX" id="usy-0Q-PCf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="xTs-Sc-U3h"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9VB-bV-x1o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2605.5999999999999" y="-621.13943028485767"/>
+        </scene>
+        <!--Side MenuTVC-->
         <scene sceneID="M4Y-RL-nxA">
             <objects>
-                <tableViewController storyboardIdentifier="MenuTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="cn1-4a-a2w" customClass="MenuTableViewController" customModule="EstudoLoginLDAP" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="MenuTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="cn1-4a-a2w" customClass="SideMenuTVC" customModule="EstudoLoginLDAP" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="8yj-dd-sIB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -67,6 +103,7 @@
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lock.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="fMu-Bb-Mfz" userLabel="home">
                                                     <rect key="frame" x="28" y="26.5" width="24" height="23"/>
+                                                    <color key="tintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="24" id="AoH-1h-81d"/>
                                                         <constraint firstAttribute="height" constant="24" id="dki-4Y-bsh"/>
@@ -95,6 +132,7 @@
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="CVH-JQ-I4B" userLabel="perfil">
                                                     <rect key="frame" x="28" y="26.5" width="24" height="23"/>
+                                                    <color key="tintColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="24" id="GnS-ep-uY9"/>
                                                         <constraint firstAttribute="width" constant="24" id="d9h-PI-rD2"/>
@@ -379,13 +417,14 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rzr-lL-IcF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="138.0809595202399"/>
+            <point key="canvasLocation" x="281" y="139"/>
         </scene>
     </scenes>
     <resources>
         <image name="escape" catalog="system" width="64" height="60"/>
         <image name="lock.circle" catalog="system" width="64" height="60"/>
         <image name="logpPMNH" width="48" height="70"/>
+        <image name="person.circle" catalog="system" width="64" height="60"/>
         <image name="person.circle.fill" catalog="system" width="64" height="60"/>
         <image name="questionmark.circle" catalog="system" width="64" height="60"/>
         <image name="questionmark.square.fill" catalog="system" width="64" height="56"/>

@@ -67,5 +67,4 @@ class NetworkCheck
         let id = ObjectIdentifier(observer)
         observations.removeValue(forKey: id)
     }
-    
 }
