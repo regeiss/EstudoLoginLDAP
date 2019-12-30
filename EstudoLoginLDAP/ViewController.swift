@@ -218,7 +218,7 @@ class ViewController: UIViewController, UITextFieldDelegate, NetworkCheckObserve
 
             
         case .ajuda:
-            guard let viewVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TelaAjuda") as? AjudaVC
+            guard let viewVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "AjudaVC") as? AjudaVC
                 else {return}
                 navigationController?.pushViewController(viewVC, animated: true)
 

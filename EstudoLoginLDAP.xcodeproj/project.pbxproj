@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		7767AF17F805E37D7357D9A6 /* Pods_EstudoLoginLDAP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A498623B3F31DCEE3A8752D /* Pods_EstudoLoginLDAP.framework */; };
+		E145650723BA55B200C765D3 /* ListaSistemasTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E145650623BA55B200C765D3 /* ListaSistemasTVC.swift */; };
+		E145650B23BA62C800C765D3 /* Sistemas.swift in Sources */ = {isa = PBXBuildFile; fileRef = E145650A23BA62C800C765D3 /* Sistemas.swift */; };
 		E148DF9023A268A1000DEE79 /* Ldap.swift in Sources */ = {isa = PBXBuildFile; fileRef = E148DF8F23A268A1000DEE79 /* Ldap.swift */; };
 		E170C3C723A3A61A008ECCF8 /* PersistenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E170C3C623A3A61A008ECCF8 /* PersistenceService.swift */; };
 		E170C3CA23A3BDD2008ECCF8 /* Usuario+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E170C3C823A3BDD2008ECCF8 /* Usuario+CoreDataClass.swift */; };
@@ -35,6 +37,8 @@
 /* Begin PBXFileReference section */
 		7A498623B3F31DCEE3A8752D /* Pods_EstudoLoginLDAP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EstudoLoginLDAP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8316B351769BBDE1DA271140 /* Pods-EstudoLoginLDAP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EstudoLoginLDAP.release.xcconfig"; path = "Target Support Files/Pods-EstudoLoginLDAP/Pods-EstudoLoginLDAP.release.xcconfig"; sourceTree = "<group>"; };
+		E145650623BA55B200C765D3 /* ListaSistemasTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaSistemasTVC.swift; sourceTree = "<group>"; };
+		E145650A23BA62C800C765D3 /* Sistemas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sistemas.swift; sourceTree = "<group>"; };
 		E148DF8F23A268A1000DEE79 /* Ldap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ldap.swift; sourceTree = "<group>"; };
 		E170C3C623A3A61A008ECCF8 /* PersistenceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceService.swift; sourceTree = "<group>"; };
 		E170C3C823A3BDD2008ECCF8 /* Usuario+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Usuario+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
@@ -128,6 +132,7 @@
 			children = (
 				E170C3C823A3BDD2008ECCF8 /* Usuario+CoreDataClass.swift */,
 				E170C3C923A3BDD2008ECCF8 /* Usuario+CoreDataProperties.swift */,
+				E145650A23BA62C800C765D3 /* Sistemas.swift */,
 			);
 			path = Modelo;
 			sourceTree = "<group>";
@@ -148,6 +153,7 @@
 				E1F4FAE923ABBAD40070CB1B /* AjudaVC.swift */,
 				E1F4FAF323B517170070CB1B /* SideMenuTVC.swift */,
 				E1F4FAF723B65A9A0070CB1B /* PerfilVC.swift */,
+				E145650623BA55B200C765D3 /* ListaSistemasTVC.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -306,8 +312,10 @@
 				E1C25CB723A2CFB300129DC6 /* EstudoLoginLDAP.xcdatamodeld in Sources */,
 				E1F4FAF623B5254B0070CB1B /* SlideInTransition.swift in Sources */,
 				E148DF9023A268A1000DEE79 /* Ldap.swift in Sources */,
+				E145650723BA55B200C765D3 /* ListaSistemasTVC.swift in Sources */,
 				E170C3CB23A3BDD2008ECCF8 /* Usuario+CoreDataProperties.swift in Sources */,
 				E1F4FAF423B517170070CB1B /* SideMenuTVC.swift in Sources */,
+				E145650B23BA62C800C765D3 /* Sistemas.swift in Sources */,
 				E1F4FAED23AD30970070CB1B /* Extensoes.swift in Sources */,
 				E1F4FAEF23B1264B0070CB1B /* NetworkService.swift in Sources */,
 				E18D82F22396AB45008C108E /* AppDelegate.swift in Sources */,
