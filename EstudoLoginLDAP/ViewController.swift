@@ -78,7 +78,7 @@ class ViewController: UIViewController, UITextFieldDelegate, NetworkCheckObserve
         if validaEntrada()
         {
             salvaUsuario()
-            self.performSegue(withIdentifier: "loginSegue", sender: self)
+            //self.performSegue(withIdentifier: "loginSegue", sender: self)
         }
     }
     

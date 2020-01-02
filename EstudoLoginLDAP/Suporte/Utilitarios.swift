@@ -8,4 +8,9 @@
 
 import Foundation
 import UIKit
-
+// snippets
+//func loadLoginScreen(){
+//       let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+//       let viewController = storyBoard.instantiateViewController(withIdentifier: "ViewController") as! ViewController
+//       self.present(viewController, animated: true, completion: nil)
+//   }
