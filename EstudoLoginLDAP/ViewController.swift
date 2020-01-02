@@ -82,12 +82,12 @@ class ViewController: UIViewController, UITextFieldDelegate, NetworkCheckObserve
         }
     }
     
-    @IBAction func btnAjuda(_ sender: Any)
-    {
-        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let TelaAjudaVC = storyBoard.instantiateViewController(identifier: "TelaAjudaVC") as! AjudaVC
-        self.present(TelaAjudaVC, animated: true, completion: nil)
-    }
+//    @IBAction func btnAjuda(_ sender: Any)
+//    {
+//        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+//        let TelaAjudaVC = storyBoard.instantiateViewController(identifier: "TelaAjudaVC") as! AjudaVC
+//        self.present(TelaAjudaVC, animated: true, completion: nil)
+//    }
 
     @IBAction func didTapMenu(_ sender: UIBarButtonItem)
     {

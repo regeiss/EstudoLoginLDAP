@@ -10,6 +10,8 @@ import Foundation
 
 class AcessoWS
 {
+    var tableArray = [String] ()
+    
     func teste()
     {
         let apiKey = "5a55c163db824179819ef6d1b167c342"
@@ -61,4 +63,44 @@ class AcessoWS
     {
         
     }
+    
+    func parseJSON()
+    {
+        let url = URL(string: "https://api.myjson.com/bins/vi56v")
+
+        let task = URLSession.shared.dataTask(with: url!) {(data, response, error) in
+
+        guard error == nil else {
+            print("returning error")
+            return
+        }
+
+        guard let content = data else {
+            print("not returning data")
+            return
+        }
+
+        guard let json = (try? JSONSerialization.jsonObject(with: content, options: JSONSerialization.ReadingOptions.mutableContainers)) as? [String: Any]
+            
+            else {
+            print("Not containing JSON")
+            return
+        }
+
+        if let array = json["companies"] as? [String] {
+            self.tableArray = array
+        }
+
+        print(self.tableArray)
+
+        DispatchQueue.main.async {
+            TableView  .reloadData()
+        }
+
+    }
+
+    task.resume()
+
+    }
+    
 }
