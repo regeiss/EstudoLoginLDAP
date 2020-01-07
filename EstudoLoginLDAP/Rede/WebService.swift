@@ -12,7 +12,8 @@ class AcessoWS
 {
     var tableArray = [String] ()
     
-    func teste()
+    // Teste de acesso a WS REST da PMNH.
+    func TesteAcesso()
     {
         let apiKey = "5a55c163db824179819ef6d1b167c342"
         let url = URL(string: "https://desenv-ws.novohamburgo.rs.gov.br/index.php/api/Memo/buscaSecretarias/")!
@@ -93,9 +94,9 @@ class AcessoWS
 
         print(self.tableArray)
 
-        DispatchQueue.main.async {
-            TableView  .reloadData()
-        }
+//        DispatchQueue.main.async {
+//            TableView  .reloadData()
+//        }
 
     }
 

@@ -11,6 +11,8 @@
 		E145650723BA55B200C765D3 /* ListaSistemasTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E145650623BA55B200C765D3 /* ListaSistemasTVC.swift */; };
 		E145650B23BA62C800C765D3 /* Sistemas.swift in Sources */ = {isa = PBXBuildFile; fileRef = E145650A23BA62C800C765D3 /* Sistemas.swift */; };
 		E148DF9023A268A1000DEE79 /* Ldap.swift in Sources */ = {isa = PBXBuildFile; fileRef = E148DF8F23A268A1000DEE79 /* Ldap.swift */; };
+		E14E2B0A23C51CCE00C75384 /* CelulaSistemasCL.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14E2B0923C51CCE00C75384 /* CelulaSistemasCL.swift */; };
+		E14E2B0C23C5205200C75384 /* Albums.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14E2B0B23C5205200C75384 /* Albums.swift */; };
 		E170C3C723A3A61A008ECCF8 /* PersistenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E170C3C623A3A61A008ECCF8 /* PersistenceService.swift */; };
 		E170C3CA23A3BDD2008ECCF8 /* Usuario+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E170C3C823A3BDD2008ECCF8 /* Usuario+CoreDataClass.swift */; };
 		E170C3CB23A3BDD2008ECCF8 /* Usuario+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E170C3C923A3BDD2008ECCF8 /* Usuario+CoreDataProperties.swift */; };
@@ -40,6 +42,8 @@
 		E145650623BA55B200C765D3 /* ListaSistemasTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaSistemasTVC.swift; sourceTree = "<group>"; };
 		E145650A23BA62C800C765D3 /* Sistemas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sistemas.swift; sourceTree = "<group>"; };
 		E148DF8F23A268A1000DEE79 /* Ldap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ldap.swift; sourceTree = "<group>"; };
+		E14E2B0923C51CCE00C75384 /* CelulaSistemasCL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CelulaSistemasCL.swift; sourceTree = "<group>"; };
+		E14E2B0B23C5205200C75384 /* Albums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Albums.swift; sourceTree = "<group>"; };
 		E170C3C623A3A61A008ECCF8 /* PersistenceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceService.swift; sourceTree = "<group>"; };
 		E170C3C823A3BDD2008ECCF8 /* Usuario+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Usuario+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
 		E170C3C923A3BDD2008ECCF8 /* Usuario+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Usuario+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
@@ -133,6 +137,7 @@
 				E170C3C823A3BDD2008ECCF8 /* Usuario+CoreDataClass.swift */,
 				E170C3C923A3BDD2008ECCF8 /* Usuario+CoreDataProperties.swift */,
 				E145650A23BA62C800C765D3 /* Sistemas.swift */,
+				E14E2B0B23C5205200C75384 /* Albums.swift */,
 			);
 			path = Modelo;
 			sourceTree = "<group>";
@@ -154,6 +159,7 @@
 				E1F4FAF323B517170070CB1B /* SideMenuTVC.swift */,
 				E1F4FAF723B65A9A0070CB1B /* PerfilVC.swift */,
 				E145650623BA55B200C765D3 /* ListaSistemasTVC.swift */,
+				E14E2B0923C51CCE00C75384 /* CelulaSistemasCL.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -302,6 +308,7 @@
 			files = (
 				E1F4FAE123A978400070CB1B /* WebService.swift in Sources */,
 				E1F4FAEA23ABBAD40070CB1B /* AjudaVC.swift in Sources */,
+				E14E2B0C23C5205200C75384 /* Albums.swift in Sources */,
 				E18D82F62396AB45008C108E /* ViewController.swift in Sources */,
 				E170C3C723A3A61A008ECCF8 /* PersistenceService.swift in Sources */,
 				E1F4FAF823B65A9A0070CB1B /* PerfilVC.swift in Sources */,
@@ -309,6 +316,7 @@
 				E194A50323A00C18006EB2AC /* Utilitarios.swift in Sources */,
 				E170C3CA23A3BDD2008ECCF8 /* Usuario+CoreDataClass.swift in Sources */,
 				E170C3CD23A3F72D008ECCF8 /* HTTPClient.swift in Sources */,
+				E14E2B0A23C51CCE00C75384 /* CelulaSistemasCL.swift in Sources */,
 				E1C25CB723A2CFB300129DC6 /* EstudoLoginLDAP.xcdatamodeld in Sources */,
 				E1F4FAF623B5254B0070CB1B /* SlideInTransition.swift in Sources */,
 				E148DF9023A268A1000DEE79 /* Ldap.swift in Sources */,

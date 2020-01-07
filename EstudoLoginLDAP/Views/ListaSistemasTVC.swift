@@ -11,7 +11,8 @@ import UIKit
 class ListaSistemasTVC: UITableViewController //, UITableViewDelegate, UITableViewDataSource
 {
     var sistemas: [Sistemas] = []
-
+    var albuns: [Album] = []
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -31,18 +32,18 @@ class ListaSistemasTVC: UITableViewController //, UITableViewDelegate, UITableVi
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        return sistemas.count
+        return albuns.count
     }
 
-    /*
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
+    {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CelulaSistemasCL", for: indexPath) as! CelulaSistemasCL
+        let album = albuns[indexPath.row]
+        cell.lblId.text = "\(String(describing: album.AlbumId))"
+        cell.lblNome.text = album.albumTitle
 
         return cell
     }
-    */
 
     /*
     // Override to support conditional editing of the table view.
@@ -90,3 +91,4 @@ class ListaSistemasTVC: UITableViewController //, UITableViewDelegate, UITableVi
     */
 
 }
+
