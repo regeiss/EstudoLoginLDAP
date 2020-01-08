@@ -11,7 +11,7 @@ import Foundation
 class AcessoWS
 {
     var tableArray = [String] ()
-    
+    var listaAlbuns = [Album] ()
     // Teste de acesso a WS REST da PMNH.
     func TesteAcesso()
     {
@@ -64,44 +64,30 @@ class AcessoWS
     {
         
     }
-    
-    func parseJSON()
+
+    func acessaAlbuns() -> [Album]
     {
-        let url = URL(string: "https://api.myjson.com/bins/vi56v")
-
-        let task = URLSession.shared.dataTask(with: url!) {(data, response, error) in
-
-        guard error == nil else {
-            print("returning error")
-            return
-        }
-
-        guard let content = data else {
-            print("not returning data")
-            return
-        }
-
-        guard let json = (try? JSONSerialization.jsonObject(with: content, options: JSONSerialization.ReadingOptions.mutableContainers)) as? [String: Any]
+        //let session = URLSession(configuration: URLSessionConfiguration.default)
+        //let url = URL(string: "https://jsonplaceholder.typicode.com/albums/1")!
+        //var request = URLRequest(url: url)
+        //request.httpMethod = "GET"
+        //request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        print("Estou na acessa album")
+        let url = URL(string: "https://jsonplaceholder.typicode.com/albums")!
+        let task = URLSession.shared.dataTask(with: url)
+        {(data, response, error) in
             
-            else {
-            print("Not containing JSON")
-            return
+            guard let albums = try? JSONDecoder().decode([Album].self, from: data!)
+            else
+            {
+                print("Error: Couldn't decode data into albums array \(String(describing: error))")
+                print(data!)
+                return
+            }
+            self.listaAlbuns = albums
         }
-
-        if let array = json["companies"] as? [String] {
-            self.tableArray = array
-        }
-
-        print(self.tableArray)
-
-//        DispatchQueue.main.async {
-//            TableView  .reloadData()
-//        }
-
+        task.resume()
+        print(listaAlbuns.count)
+        return listaAlbuns
     }
-
-    task.resume()
-
-    }
-    
 }

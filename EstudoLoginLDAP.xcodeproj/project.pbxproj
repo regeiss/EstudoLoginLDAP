@@ -116,7 +116,7 @@
 				E1F4FAEB23AD04680070CB1B /* LDAP */,
 				E1F4FAE223AA558B0070CB1B /* Views */,
 				E1A556C323A118370056D2E3 /* Suporte */,
-				E1A556C223A117A00056D2E3 /* Modelo */,
+				E1A556C223A117A00056D2E3 /* Modelos */,
 				E18D82F12396AB45008C108E /* AppDelegate.swift */,
 				E18D82F32396AB45008C108E /* SceneDelegate.swift */,
 				E18D82F52396AB45008C108E /* ViewController.swift */,
@@ -131,7 +131,7 @@
 			path = EstudoLoginLDAP;
 			sourceTree = "<group>";
 		};
-		E1A556C223A117A00056D2E3 /* Modelo */ = {
+		E1A556C223A117A00056D2E3 /* Modelos */ = {
 			isa = PBXGroup;
 			children = (
 				E170C3C823A3BDD2008ECCF8 /* Usuario+CoreDataClass.swift */,
@@ -139,7 +139,7 @@
 				E145650A23BA62C800C765D3 /* Sistemas.swift */,
 				E14E2B0B23C5205200C75384 /* Albums.swift */,
 			);
-			path = Modelo;
+			path = Modelos;
 			sourceTree = "<group>";
 		};
 		E1A556C323A118370056D2E3 /* Suporte */ = {
