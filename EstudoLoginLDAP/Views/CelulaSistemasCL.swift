@@ -13,7 +13,7 @@ class CelulaSistemasCL: UITableViewCell
     
     @IBOutlet weak var lblId: UILabel!
     @IBOutlet weak var lblNome: UILabel!
-    
+     
     override func setSelected(_ selected: Bool, animated: Bool)
     {
         super.setSelected(selected, animated: animated)

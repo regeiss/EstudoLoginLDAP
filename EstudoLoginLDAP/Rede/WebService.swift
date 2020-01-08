@@ -72,7 +72,6 @@ class AcessoWS
         //var request = URLRequest(url: url)
         //request.httpMethod = "GET"
         //request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        print("Estou na acessa album")
         let url = URL(string: "https://jsonplaceholder.typicode.com/albums")!
         let task = URLSession.shared.dataTask(with: url)
         {(data, response, error) in
@@ -84,10 +83,16 @@ class AcessoWS
                 print(data!)
                 return
             }
+            for album in albums
+              {
+                  print("album id is \(String(describing: album.AlbumId))")
+                  print("album title is \(String(describing: album.albumTitle))")
+                  print("user id is \(String(describing: album.userId))")
+                  print("---")
+              }
             self.listaAlbuns = albums
         }
         task.resume()
-        print(listaAlbuns.count)
         return listaAlbuns
     }
 }

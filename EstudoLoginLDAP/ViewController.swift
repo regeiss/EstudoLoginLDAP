@@ -101,12 +101,11 @@ class ViewController: UIViewController, UITextFieldDelegate, NetworkCheckObserve
     // MARK: - UITextField Delegates
     func textFieldDidBeginEditing(_ textField: UITextField)
     {
-        print("TextField did begin editing method called")
+    
     }
     
     func textFieldDidEndEditing(_ textField: UITextField)
     {
-        print("TextField did end editing method called\(textField.text!)")
         switch textField
         {
             case txtUsuario:
@@ -121,31 +120,26 @@ class ViewController: UIViewController, UITextFieldDelegate, NetworkCheckObserve
     
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool
     {
-        print("TextField should begin editing method called")
         return true;
     }
     
     func textFieldShouldClear(_ textField: UITextField) -> Bool
     {
-        print("TextField should clear method called")
         return true;
     }
     
     func textFieldShouldEndEditing(_ textField: UITextField) -> Bool
     {
-        print("TextField should end editing method called")
         return true;
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool
     {
-        print("While entering the characters this method gets called")
         return true;
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool
     {
-        print("TextField should return method called")
         switch textField
         {
             case txtUsuario:
@@ -237,7 +231,6 @@ class ViewController: UIViewController, UITextFieldDelegate, NetworkCheckObserve
         usuario.dataUltimoLogin = Date()
         usuario.email = "teste@teste.com.br"
         PersistenceService.saveContext()
-        print("Objeto salvo")
     }
     
     private func buscaUsuario()

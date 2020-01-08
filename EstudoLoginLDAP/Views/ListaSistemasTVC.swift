@@ -17,10 +17,28 @@ class ListaSistemasTVC: UITableViewController //, UITableViewDelegate, UITableVi
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        albuns = acesso.acessaAlbuns()
+        let url = URL(string: "https://jsonplaceholder.typicode.com/albums")!
+        let task = URLSession.shared.dataTask(with: url)
+        {(data, response, error) in
+            
+            guard let albums = try? JSONDecoder().decode([Album].self, from: data!)
+            else
+            {
+                print("Error: Couldn't decode data into albums array \(String(describing: error))")
+                return
+            }
+            self.albuns = albums
+        }
+        
+        DispatchQueue.main.async
+        {
+            self.tableView.reloadData()
+            print("reload")
+        }
+        task.resume()
     }
 
-    // MARK: - Table view data source
+// MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int
     {
         return 1
@@ -28,13 +46,15 @@ class ListaSistemasTVC: UITableViewController //, UITableViewDelegate, UITableVi
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        return albuns.count
+        print(self.albuns.count)
+        return self.albuns.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CelulaSistemasCL", for: indexPath) as! CelulaSistemasCL
-        let album = albuns[indexPath.row]
+        let album = self.albuns[indexPath.row]
+        print (album.albumTitle!)
         cell.lblId.text = "\(String(describing: album.AlbumId))"
         cell.lblNome.text = album.albumTitle
         return cell
