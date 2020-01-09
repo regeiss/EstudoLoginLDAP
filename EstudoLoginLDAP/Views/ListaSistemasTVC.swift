@@ -62,6 +62,19 @@ class ListaSistemasTVC: UITableViewController //, UITableViewDelegate, UITableVi
     }
     
     // MARK: - Table view delegate
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
+    {
+        <#code#>
+    }
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath)
+    {
+        
+    }
     
+    // MARK: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        <#code#>
+    }
 }
 

@@ -92,11 +92,13 @@ class ViewController: UIViewController, UITextFieldDelegate, NetworkCheckObserve
     @IBAction func didTapMenu(_ sender: UIBarButtonItem)
     {
         guard let menuViewController = storyboard?.instantiateViewController(withIdentifier: "MenuTableViewController") as? SideMenuTVC
-            else { return }
-         menuViewController.didTapMenuType = { menuType in self.transitionToNew(menuType)}
-         menuViewController.modalPresentationStyle = .overCurrentContext
-         menuViewController.transitioningDelegate = self
-         present(menuViewController, animated: true)
+        else
+        { return }
+        
+        menuViewController.didTapMenuType = { menuType in self.transitionToNew(menuType)}
+        menuViewController.modalPresentationStyle = .overCurrentContext
+        menuViewController.transitioningDelegate = self
+        present(menuViewController, animated: true)
     }
     // MARK: - UITextField Delegates
     func textFieldDidBeginEditing(_ textField: UITextField)

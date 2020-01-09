@@ -372,6 +372,7 @@
                                 <connections>
                                     <outlet property="lblId" destination="Bcz-gq-8My" id="OIv-lq-x7r"/>
                                     <outlet property="lblNome" destination="aWP-yF-1bo" id="gT7-f3-Bkn"/>
+                                    <segue destination="VTX-UF-YZ0" kind="show" id="asT-RW-BXL"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -386,6 +387,35 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n5b-gn-hdO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1832.8" y="138.98050974512745"/>
+        </scene>
+        <!--SubSistema-->
+        <scene sceneID="gyh-L5-5Cr">
+            <objects>
+                <viewController storyboardIdentifier="SubSistema" title="SubSistema" id="VTX-UF-YZ0" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kzB-6v-L1w">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Subview sistemas" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yhx-WH-bSc">
+                                <rect key="frame" x="77" y="366" width="261" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="X3K-ct-oiu"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="FN1-5G-9Nt">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="2mO-N1-5Sa"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="brA-J6-Wva"/>
+                    </navigationItem>
+                </viewController>
+                <barButtonItem title="Item" id="Ig5-sN-0B7"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5mw-Pq-vp8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2620" y="139"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="5cB-nn-RLF">

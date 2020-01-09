@@ -18,5 +18,4 @@ class CelulaSistemasCL: UITableViewCell
     {
         super.setSelected(selected, animated: animated)
     }
-
 }
