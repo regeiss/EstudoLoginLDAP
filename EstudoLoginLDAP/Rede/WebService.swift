@@ -11,7 +11,7 @@ import Foundation
 class AcessoWS
 {
     var tableArray = [String] ()
-    var listaAlbuns = [Album] ()
+    var listaAlbuns: [Album] = []
     // Teste de acesso a WS REST da PMNH.
     func TesteAcesso()
     {
@@ -67,11 +67,6 @@ class AcessoWS
 
     func acessaAlbuns() -> [Album]
     {
-        //let session = URLSession(configuration: URLSessionConfiguration.default)
-        //let url = URL(string: "https://jsonplaceholder.typicode.com/albums/1")!
-        //var request = URLRequest(url: url)
-        //request.httpMethod = "GET"
-        //request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         let url = URL(string: "https://jsonplaceholder.typicode.com/albums")!
         let task = URLSession.shared.dataTask(with: url)
         {(data, response, error) in
@@ -80,19 +75,32 @@ class AcessoWS
             else
             {
                 print("Error: Couldn't decode data into albums array \(String(describing: error))")
-                print(data!)
                 return
             }
-            for album in albums
-              {
-                  print("album id is \(String(describing: album.AlbumId))")
-                  print("album title is \(String(describing: album.albumTitle))")
-                  print("user id is \(String(describing: album.userId))")
-                  print("---")
-              }
+
             self.listaAlbuns = albums
         }
         task.resume()
-        return listaAlbuns
+        return self.listaAlbuns
     }
 }
+//    let url = URL(string: "https://jsonplaceholder.typicode.com/albums")!
+//    let task = URLSession.shared.dataTask(with: url)
+//    {(data, response, error) in
+//
+//        guard let albums = try? JSONDecoder().decode([Album].self, from: data!)
+//        else
+//        {
+//            print("Error: Couldn't decode data into albums array \(String(describing: error))")
+//            return
+//        }
+//        self.albuns = albums
+//    }
+//
+//    DispatchQueue.main.async
+//    {
+//        self.tableView.reloadData()
+//        print("reload")
+//    }
+//    task.resume()
+//}
