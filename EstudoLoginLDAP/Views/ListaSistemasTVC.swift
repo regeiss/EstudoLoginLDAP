@@ -64,17 +64,31 @@ class ListaSistemasTVC: UITableViewController //, UITableViewDelegate, UITableVi
     // MARK: - Table view delegate
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
-        <#code#>
+//        <#code#>
     }
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath)
     {
-        
+        //
     }
     
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
-        <#code#>
+        if let row = tableView.indexPathForSelectedRow?.row
+        {
+            let selectedLine = self.albuns[row]
+            (segue.destination as? SubSistemasVC)?.albuns = [(selectedLine)]
+        }
     }
 }
 
+extension ListaSistemasTVC
+{
+  @IBAction func cancelToSistemas(_ segue: UIStoryboardSegue)
+  {
+  }
+
+  @IBAction func saveDetail(_ segue: UIStoryboardSegue)
+  {
+  }
+}

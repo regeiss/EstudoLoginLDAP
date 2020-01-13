@@ -13,6 +13,7 @@
 		E148DF9023A268A1000DEE79 /* Ldap.swift in Sources */ = {isa = PBXBuildFile; fileRef = E148DF8F23A268A1000DEE79 /* Ldap.swift */; };
 		E14E2B0A23C51CCE00C75384 /* CelulaSistemasCL.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14E2B0923C51CCE00C75384 /* CelulaSistemasCL.swift */; };
 		E14E2B0C23C5205200C75384 /* Albums.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14E2B0B23C5205200C75384 /* Albums.swift */; };
+		E14E2B1023CA0BCE00C75384 /* SubSistemasVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14E2B0F23CA0BCE00C75384 /* SubSistemasVC.swift */; };
 		E170C3C723A3A61A008ECCF8 /* PersistenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E170C3C623A3A61A008ECCF8 /* PersistenceService.swift */; };
 		E170C3CA23A3BDD2008ECCF8 /* Usuario+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E170C3C823A3BDD2008ECCF8 /* Usuario+CoreDataClass.swift */; };
 		E170C3CB23A3BDD2008ECCF8 /* Usuario+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E170C3C923A3BDD2008ECCF8 /* Usuario+CoreDataProperties.swift */; };
@@ -44,6 +45,7 @@
 		E148DF8F23A268A1000DEE79 /* Ldap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ldap.swift; sourceTree = "<group>"; };
 		E14E2B0923C51CCE00C75384 /* CelulaSistemasCL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CelulaSistemasCL.swift; sourceTree = "<group>"; };
 		E14E2B0B23C5205200C75384 /* Albums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Albums.swift; sourceTree = "<group>"; };
+		E14E2B0F23CA0BCE00C75384 /* SubSistemasVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubSistemasVC.swift; sourceTree = "<group>"; };
 		E170C3C623A3A61A008ECCF8 /* PersistenceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceService.swift; sourceTree = "<group>"; };
 		E170C3C823A3BDD2008ECCF8 /* Usuario+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Usuario+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
 		E170C3C923A3BDD2008ECCF8 /* Usuario+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Usuario+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
@@ -160,6 +162,7 @@
 				E1F4FAF723B65A9A0070CB1B /* PerfilVC.swift */,
 				E145650623BA55B200C765D3 /* ListaSistemasTVC.swift */,
 				E14E2B0923C51CCE00C75384 /* CelulaSistemasCL.swift */,
+				E14E2B0F23CA0BCE00C75384 /* SubSistemasVC.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -324,6 +327,7 @@
 				E170C3CB23A3BDD2008ECCF8 /* Usuario+CoreDataProperties.swift in Sources */,
 				E1F4FAF423B517170070CB1B /* SideMenuTVC.swift in Sources */,
 				E145650B23BA62C800C765D3 /* Sistemas.swift in Sources */,
+				E14E2B1023CA0BCE00C75384 /* SubSistemasVC.swift in Sources */,
 				E1F4FAED23AD30970070CB1B /* Extensoes.swift in Sources */,
 				E1F4FAEF23B1264B0070CB1B /* NetworkService.swift in Sources */,
 				E18D82F22396AB45008C108E /* AppDelegate.swift in Sources */,

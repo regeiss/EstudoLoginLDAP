@@ -391,7 +391,7 @@
         <!--SubSistema-->
         <scene sceneID="gyh-L5-5Cr">
             <objects>
-                <viewController storyboardIdentifier="SubSistema" title="SubSistema" id="VTX-UF-YZ0" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SubSistema" title="SubSistema" id="VTX-UF-YZ0" customClass="SubSistemasVC" customModule="EstudoLoginLDAP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kzB-6v-L1w">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -408,12 +408,24 @@
                         <viewLayoutGuide key="safeArea" id="X3K-ct-oiu"/>
                     </view>
                     <navigationItem key="navigationItem" id="FN1-5G-9Nt">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="2mO-N1-5Sa"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="brA-J6-Wva"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="2mO-N1-5Sa">
+                            <connections>
+                                <segue destination="x0H-VS-VzJ" kind="unwind" unwindAction="cancelToSistemas:" id="puz-DH-gN4"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="brA-J6-Wva">
+                            <connections>
+                                <segue destination="x0H-VS-VzJ" kind="unwind" unwindAction="saveDetail:" id="Qtj-dg-mRT"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="lblSubSistema" destination="yhx-WH-bSc" id="kO9-4K-WCc"/>
+                    </connections>
                 </viewController>
                 <barButtonItem title="Item" id="Ig5-sN-0B7"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5mw-Pq-vp8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="x0H-VS-VzJ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2620" y="139"/>
         </scene>
