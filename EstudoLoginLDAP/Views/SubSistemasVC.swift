@@ -10,26 +10,42 @@ import UIKit
 
 class SubSistemasVC: UIViewController
 {
-
+    @IBOutlet weak var lblId: UILabel!
     @IBOutlet weak var lblSubSistema: UILabel!
-    var albuns: [Album] = []
+    
+    var album: Album?
+    var Id: Int?
+    {
+        didSet {lblId.text = "\(Id ?? 0)"}
+        
+    }
+    
+    var SubSistema: String?
+    {
+        didSet {lblSubSistema.text = SubSistema?.NomeFormatado ?? ""}
+        
+    }
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        albuns = 
-        lblSubSistema.text = ""
+        Id = album?.AlbumId
+        SubSistema = album?.albumTitle
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 
+//extension Int
+//{
+//    var IdFormatado: Int
+//    {
+//        return "Nº:" + String(self)
+//    }
+//}
+
+extension String
+{
+    var NomeFormatado: String
+    {
+        return "-" + self
+    }
+}

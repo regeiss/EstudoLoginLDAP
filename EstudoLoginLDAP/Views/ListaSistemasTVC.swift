@@ -40,7 +40,6 @@ class ListaSistemasTVC: UITableViewController //, UITableViewDelegate, UITableVi
         hideIndicator()
     }
 
-
 // MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int
     {
@@ -77,7 +76,7 @@ class ListaSistemasTVC: UITableViewController //, UITableViewDelegate, UITableVi
         if let row = tableView.indexPathForSelectedRow?.row
         {
             let selectedLine = self.albuns[row]
-            (segue.destination as? SubSistemasVC)?.albuns = [(selectedLine)]
+            (segue.destination as? SubSistemasVC)?.album = selectedLine
         }
     }
 }
