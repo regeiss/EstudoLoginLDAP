@@ -40,6 +40,11 @@ class ViewController: UIViewController, UITextFieldDelegate, NetworkCheckObserve
         statusLabel.text = networkCheck.currentStatus == .satisfied ? "Connected" : "Disconnected"
         networkCheck.addObserver(observer: self)
         
+//        mostra onde fica o BD SQLite
+//        let dirPaths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
+//        let  docsDir = dirPaths[0]
+//        print(docsDir)
+        
     }
     override func viewWillDisappear(_ animated: Bool)
     {
@@ -70,6 +75,7 @@ class ViewController: UIViewController, UITextFieldDelegate, NetworkCheckObserve
         txtSenha.backgroundColor = UIColor.systemGray6
         txtUsuario.returnKeyType = .next
         
+        deletaUsuario()
         buscaUsuario()
     }
     // MARK: - Acaos dos botoes
@@ -258,6 +264,13 @@ class ViewController: UIViewController, UITextFieldDelegate, NetworkCheckObserve
             // verificacao de erros aqui
             print("Ocorreu um erro de core data")
         }
+    }
+    
+    private func deletaUsuario()
+     {
+        let usuario = Usuario(context: PersistenceService.context)
+        PersistenceService.context.delete(usuario) // .fetch(fetchRequest)
+        print("usuario excluído")
     }
 }
 

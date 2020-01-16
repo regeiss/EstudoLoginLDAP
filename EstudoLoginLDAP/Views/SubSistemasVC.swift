@@ -17,13 +17,11 @@ class SubSistemasVC: UIViewController
     var Id: Int?
     {
         didSet {lblId.text = "\(Id ?? 0)"}
-        
     }
     
     var SubSistema: String?
     {
         didSet {lblSubSistema.text = SubSistema?.NomeFormatado ?? ""}
-        
     }
     
     override func viewDidLoad()

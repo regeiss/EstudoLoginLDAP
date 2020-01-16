@@ -4,7 +4,7 @@
 //
 //  Created by Roberto Edgar Geiss on 13/12/19.
 //  Copyright © 2019 Roberto Edgar Geiss. All rights reserved.
-//
+//  Adaptado do Github de kiloloco 
 
 import Foundation
 import CoreData
@@ -45,6 +45,20 @@ class PersistenceService
                 let nserror = error as NSError
                 fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
             }
+        }
+    }
+    
+    static func delete(_ object: NSManagedObject)
+    {
+        context.delete(object)
+        do
+        {
+            try context.save()
+        }
+        catch
+        {
+            let nserror = error as NSError
+            fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
         }
     }
 }
