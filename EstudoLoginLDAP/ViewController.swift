@@ -253,11 +253,9 @@ class ViewController: UIViewController, UITextFieldDelegate, NetworkCheckObserve
             self.usuario = usuario
             if self.usuario.count > 0
             {
-                for elemento in self.usuario
-                {
-                    print(elemento.nome! + " " + elemento.senha! + " " + elemento.email!)
-                }
+                self.usuario.forEach({print($0.nome!)})
             }
+            print (self.usuario.count)
         }
         catch
         {
@@ -270,7 +268,7 @@ class ViewController: UIViewController, UITextFieldDelegate, NetworkCheckObserve
      {
         let usuario = Usuario(context: PersistenceService.context)
         PersistenceService.context.delete(usuario) // .fetch(fetchRequest)
-        print("usuario excluído")
+        print("Usuário excluído")
     }
 }
 

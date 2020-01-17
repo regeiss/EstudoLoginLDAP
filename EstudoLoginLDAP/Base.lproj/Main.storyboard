@@ -396,22 +396,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Subview sistemas" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yhx-WH-bSc">
-                                <rect key="frame" x="77" y="366" width="261" height="41"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subview sistemas" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yhx-WH-bSc">
+                                <rect key="frame" x="76.666666666666686" y="366" width="261" height="41"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bTc-Vv-cMc">
-                                <rect key="frame" x="77" y="316" width="53" height="27"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bTc-Vv-cMc">
+                                <rect key="frame" x="180.66666666666666" y="316" width="53" height="27"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="X3K-ct-oiu" firstAttribute="bottom" secondItem="yhx-WH-bSc" secondAttribute="bottom" constant="455" id="1Ua-5X-XNt"/>
+                            <constraint firstItem="yhx-WH-bSc" firstAttribute="top" secondItem="bTc-Vv-cMc" secondAttribute="bottom" constant="23" id="67q-WL-pyb"/>
+                            <constraint firstItem="bTc-Vv-cMc" firstAttribute="centerX" secondItem="kzB-6v-L1w" secondAttribute="centerX" id="aIZ-TV-KmJ"/>
+                            <constraint firstItem="yhx-WH-bSc" firstAttribute="centerX" secondItem="kzB-6v-L1w" secondAttribute="centerX" id="bVO-6m-kyq"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="X3K-ct-oiu"/>
                     </view>
                     <navigationItem key="navigationItem" id="FN1-5G-9Nt">
