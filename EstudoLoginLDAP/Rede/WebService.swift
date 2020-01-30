@@ -84,23 +84,4 @@ class AcessoWS
         return self.listaAlbuns
     }
 }
-//    let url = URL(string: "https://jsonplaceholder.typicode.com/albums")!
-//    let task = URLSession.shared.dataTask(with: url)
-//    {(data, response, error) in
-//
-//        guard let albums = try? JSONDecoder().decode([Album].self, from: data!)
-//        else
-//        {
-//            print("Error: Couldn't decode data into albums array \(String(describing: error))")
-//            return
-//        }
-//        self.albuns = albums
-//    }
-//
-//    DispatchQueue.main.async
-//    {
-//        self.tableView.reloadData()
-//        print("reload")
-//    }
-//    task.resume()
-//}
+
