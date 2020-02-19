@@ -23,9 +23,18 @@ class ValidaLogin
         {
             return false 
         }
+        
+        if login != "rgeiss"
+        {
+            return false
+        }
+        
+        if senha != "1234"
+        {
+            return false
+        }
+        
         return true
     }
-    
-    
 }
 
