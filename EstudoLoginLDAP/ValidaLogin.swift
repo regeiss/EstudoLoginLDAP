@@ -8,33 +8,25 @@
 
 import Foundation
 
-class ValidaLogin
+public class Login
 {
-    var plogin: String = ""
-    var psenha: String = ""
+//    var plogin: String = ""
+//    var psenha: String = ""
     
-    func ValidaUsuario(login: String, senha: String) -> Bool
+    func validaUsuario(login: String, senha: String) -> Bool
     {
-        if login.isEmpty
-        {
-            return false
-        }
-        else if senha.isEmpty
-        {
-            return false 
-        }
+        var retorno: Bool = true
         
         if login != "rgeiss"
         {
-            return false
+            retorno = false
         }
-        
-        if senha != "1234"
+        else if senha != "1234"
         {
-            return false
+            retorno = false
         }
         
-        return true
+        return retorno
     }
 }
 

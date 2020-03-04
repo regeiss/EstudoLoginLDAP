@@ -84,7 +84,7 @@ class ViewController: UIViewController, UITextFieldDelegate, NetworkCheckObserve
         if validaEntrada()
         {
             salvaUsuario()
-            //self.performSegue(withIdentifier: "loginSegue", sender: self)
+            self.performSegue(withIdentifier: "loginSegue", sender: self)
         }
     }
     
@@ -191,6 +191,7 @@ class ViewController: UIViewController, UITextFieldDelegate, NetworkCheckObserve
     func validaEntrada() -> Bool
     {
         var retorno: Bool = true
+        let usuarioValido = Login()
         
         if txtUsuario.text!.isEmpty
         {
@@ -201,6 +202,12 @@ class ViewController: UIViewController, UITextFieldDelegate, NetworkCheckObserve
         {
             displayErrorMessage(title: "Aviso", message: "Senha deve ser informada")
             retorno = false
+        }
+        
+        if usuarioValido.validaUsuario(login: txtUsuario.text!, senha: txtSenha.text!) == false
+        {
+            retorno = false
+            displayErrorMessage(title: "Aviso", message: "Usuário ou senha inválido")
         }
         return retorno
     }
@@ -217,7 +224,6 @@ class ViewController: UIViewController, UITextFieldDelegate, NetworkCheckObserve
             guard let viewVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "PerfilVC") as? PerfilVC
                 else {return}
                 navigationController?.pushViewController(viewVC, animated: true)
-
             
         case .ajuda:
             guard let viewVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "AjudaVC") as? AjudaVC
@@ -255,7 +261,7 @@ class ViewController: UIViewController, UITextFieldDelegate, NetworkCheckObserve
             {
                 self.usuario.forEach({print($0.nome!)})
             }
-            print (self.usuario.count)
+            //print (self.usuario.count)
         }
         catch
         {

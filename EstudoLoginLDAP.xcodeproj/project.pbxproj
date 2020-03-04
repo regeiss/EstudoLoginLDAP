@@ -122,13 +122,13 @@
 				E18D82F12396AB45008C108E /* AppDelegate.swift */,
 				E18D82F32396AB45008C108E /* SceneDelegate.swift */,
 				E18D82F52396AB45008C108E /* ViewController.swift */,
+				E194A4FE239E7B90006EB2AC /* ValidaLogin.swift */,
+				E1F4FAEC23AD30970070CB1B /* Extensoes.swift */,
 				E18D82F72396AB45008C108E /* Main.storyboard */,
 				E18D82FD2396AB48008C108E /* Assets.xcassets */,
 				E18D82FF2396AB48008C108E /* LaunchScreen.storyboard */,
 				E1C25CB523A2CFB300129DC6 /* EstudoLoginLDAP.xcdatamodeld */,
 				E18D83022396AB48008C108E /* Info.plist */,
-				E194A4FE239E7B90006EB2AC /* ValidaLogin.swift */,
-				E1F4FAEC23AD30970070CB1B /* Extensoes.swift */,
 			);
 			path = EstudoLoginLDAP;
 			sourceTree = "<group>";

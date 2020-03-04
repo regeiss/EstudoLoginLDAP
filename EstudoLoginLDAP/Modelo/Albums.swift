@@ -10,10 +10,11 @@ import Foundation
 
 struct Album: Codable
 {
-    var userId: Int?
-    var AlbumId: Int?
-    var albumTitle: String?
+    var userId: Int
+    var AlbumId: Int
+    var albumTitle: String
     
+    // Necessario para o decode JSON
     enum CodingKeys: String, CodingKey
     {
         case userId = "userId"

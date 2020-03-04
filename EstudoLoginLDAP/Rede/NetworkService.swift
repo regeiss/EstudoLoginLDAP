@@ -24,7 +24,6 @@ enum MyResult<T, E: Error>
 
 class NetworkingService
 {
-    let baseUrl = "https://kiloloco.herokuapp.com/api"
     
 //    func handleResponse(for request: URLRequest,
 //                        completion: @escaping (Result<Usuario, Error>) -> Void) {
