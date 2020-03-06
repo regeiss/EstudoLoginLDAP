@@ -25,6 +25,7 @@ class ViewController: UIViewController, UITextFieldDelegate, NetworkCheckObserve
     var usuario = [Usuario]()
     let transiton = SlideInTransition()
     var topView: UIView?
+    var disparaSegue: Bool = false
 
     // MARK: - Ciclo de vida da view
     override func viewDidLoad()
@@ -78,13 +79,23 @@ class ViewController: UIViewController, UITextFieldDelegate, NetworkCheckObserve
         deletaUsuario()
         buscaUsuario()
     }
+    
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool
+    {
+        return disparaSegue
+    }
     // MARK: - Acaos dos botoes
     @IBAction func loginAcao(_ sender: Any)
     {
         if validaEntrada()
         {
             salvaUsuario()
-            self.performSegue(withIdentifier: "loginSegue", sender: self)
+            disparaSegue = true
+            //self.performSegue(withIdentifier: "loginSegue", sender: self)
+        }
+        else
+        {
+            disparaSegue = false
         }
     }
     
