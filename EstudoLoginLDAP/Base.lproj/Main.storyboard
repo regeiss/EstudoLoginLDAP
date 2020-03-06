@@ -222,7 +222,7 @@
             </objects>
             <point key="canvasLocation" x="1076" y="-621.13943028485767"/>
         </scene>
-        <!--View Controller-->
+        <!--Voltar-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="EstudoLoginLDAP" customModuleProvider="target" sceneMemberID="viewController">
@@ -241,7 +241,7 @@
                                 </state>
                                 <connections>
                                     <action selector="loginAcao:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vcD-vQ-Ehz"/>
-                                    <segue destination="MEc-kW-Ff3" kind="show" identifier="loginSegue" id="Idc-u9-o6I"/>
+                                    <segue destination="MEc-kW-Ff3" kind="show" identifier="loginSegue" id="j5y-pD-KN3"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Informe seu usuário" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hil-6s-a9z">
@@ -319,7 +319,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Uvb-YZ-HHn">
+                    <navigationItem key="navigationItem" title="Voltar" id="Uvb-YZ-HHn">
                         <barButtonItem key="leftBarButtonItem" title="Menu" image="sidebar.left" catalog="system" id="WOY-So-30K">
                             <connections>
                                 <action selector="didTapMenu:" destination="BYZ-38-t0r" id="CRh-Vf-uwr"/>
@@ -335,7 +335,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1076" y="138.0809595202399"/>
+            <point key="canvasLocation" x="1075.3623188405797" y="137.94642857142856"/>
         </scene>
         <!--ListaSistemas-->
         <scene sceneID="wil-Qt-Ckb">
@@ -382,7 +382,9 @@
                             <outlet property="delegate" destination="MEc-kW-Ff3" id="nMM-wg-SH8"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="SIstemas" id="L7k-iy-9MS"/>
+                    <navigationItem key="navigationItem" title="Sistemas" id="L7k-iy-9MS">
+                        <barButtonItem key="backBarButtonItem" title="Voltar" id="ds0-4W-yxz"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n5b-gn-hdO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -427,12 +429,12 @@
                         <viewLayoutGuide key="safeArea" id="X3K-ct-oiu"/>
                     </view>
                     <navigationItem key="navigationItem" id="FN1-5G-9Nt">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="2mO-N1-5Sa">
+                        <barButtonItem key="leftBarButtonItem" title="Cancelar" id="2mO-N1-5Sa">
                             <connections>
                                 <segue destination="x0H-VS-VzJ" kind="unwind" unwindAction="cancelToSistemas:" id="puz-DH-gN4"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="brA-J6-Wva">
+                        <barButtonItem key="rightBarButtonItem" title="OK" id="brA-J6-Wva">
                             <connections>
                                 <segue destination="x0H-VS-VzJ" kind="unwind" unwindAction="saveDetail:" id="Qtj-dg-mRT"/>
                             </connections>
@@ -449,10 +451,10 @@
             </objects>
             <point key="canvasLocation" x="2618.840579710145" y="138.61607142857142"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--SIstemas Inicial-->
         <scene sceneID="5cB-nn-RLF">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="U4g-sg-ILn" sceneMemberID="viewController">
+                <navigationController title="SIstemas Inicial" automaticallyAdjustsScrollViewInsets="NO" id="U4g-sg-ILn" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iMM-TS-PyB">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
