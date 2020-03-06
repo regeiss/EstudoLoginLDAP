@@ -8,13 +8,17 @@
 
 import UIKit
 import CoreData
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate
 {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool
     {
-        // Override point for customization after application launch.
+        // Definicoes do Firebase Realm Database
+        var databaseRefer: DatabaseReference!
+        FirebaseApp.configure()
+
         return true
     }
 

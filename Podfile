@@ -7,4 +7,6 @@ target 'EstudoLoginLDAP' do
 
   # Pods for EstudoLoginLDAP
 pod 'MBProgressHUD', '~> 1.1.0'
+pod 'Firebase/Analytics'    
+pod 'Firebase/Database'
 end

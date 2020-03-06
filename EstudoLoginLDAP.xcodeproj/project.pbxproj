@@ -28,6 +28,7 @@
 		E194A50323A00C18006EB2AC /* Utilitarios.swift in Sources */ = {isa = PBXBuildFile; fileRef = E194A50223A00C18006EB2AC /* Utilitarios.swift */; };
 		E1A556C523A118CF0056D2E3 /* Rede.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A556C423A118CF0056D2E3 /* Rede.swift */; };
 		E1C25CB723A2CFB300129DC6 /* EstudoLoginLDAP.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E1C25CB523A2CFB300129DC6 /* EstudoLoginLDAP.xcdatamodeld */; };
+		E1CF61252412C3A900839C59 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E1CF61242412C3A800839C59 /* GoogleService-Info.plist */; };
 		E1F4FAE123A978400070CB1B /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F4FAE023A978400070CB1B /* WebService.swift */; };
 		E1F4FAEA23ABBAD40070CB1B /* AjudaVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F4FAE923ABBAD40070CB1B /* AjudaVC.swift */; };
 		E1F4FAED23AD30970070CB1B /* Extensoes.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F4FAEC23AD30970070CB1B /* Extensoes.swift */; };
@@ -62,6 +63,7 @@
 		E194A50223A00C18006EB2AC /* Utilitarios.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilitarios.swift; sourceTree = "<group>"; };
 		E1A556C423A118CF0056D2E3 /* Rede.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rede.swift; sourceTree = "<group>"; };
 		E1C25CB623A2CFB300129DC6 /* EstudoLoginLDAP.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EstudoLoginLDAP.xcdatamodel; sourceTree = "<group>"; };
+		E1CF61242412C3A800839C59 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E1F4FAE023A978400070CB1B /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		E1F4FAE923ABBAD40070CB1B /* AjudaVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AjudaVC.swift; sourceTree = "<group>"; };
 		E1F4FAEC23AD30970070CB1B /* Extensoes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensoes.swift; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 				E18D82FF2396AB48008C108E /* LaunchScreen.storyboard */,
 				E1C25CB523A2CFB300129DC6 /* EstudoLoginLDAP.xcdatamodeld */,
 				E18D83022396AB48008C108E /* Info.plist */,
+				E1CF61242412C3A800839C59 /* GoogleService-Info.plist */,
 			);
 			path = EstudoLoginLDAP;
 			sourceTree = "<group>";
@@ -255,6 +258,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E18D83012396AB48008C108E /* LaunchScreen.storyboard in Resources */,
+				E1CF61252412C3A900839C59 /* GoogleService-Info.plist in Resources */,
 				E18D82FE2396AB48008C108E /* Assets.xcassets in Resources */,
 				E18D82F92396AB45008C108E /* Main.storyboard in Resources */,
 			);

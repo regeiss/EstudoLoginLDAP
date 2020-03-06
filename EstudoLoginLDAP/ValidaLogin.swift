@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import FirebaseDatabase
 
 public class Login
 {
@@ -15,8 +16,14 @@ public class Login
     
     func validaUsuario(login: String, senha: String) -> Bool
     {
+        // Le JSON no Firebase
+        var databaseRefer = Database.database().reference()
+        var databaseHandler: DatabaseHandle!
+        
         var retorno: Bool = true
         
+        
+        //DatabaseHandle = databaseRefer.child("usuario").observe(.childAdded, with: {(data) in let })
         if login != "rgeiss"
         {
             retorno = false
