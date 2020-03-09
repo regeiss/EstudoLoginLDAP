@@ -11,19 +11,24 @@ import FirebaseDatabase
 
 public class Login
 {
-//    var plogin: String = ""
-//    var psenha: String = ""
-    
     func validaUsuario(login: String, senha: String) -> Bool
     {
         // Le JSON no Firebase
-        var databaseRefer = Database.database().reference()
-        var databaseHandler: DatabaseHandle!
-        
+        let databaseRefer = Database.database().reference()
         var retorno: Bool = true
         
+        // Le Firebase
+        databaseRefer.child("usuarios").child(login).observeSingleEvent(of: .value, with: {(snapshot) in
+            let value = snapshot.value as? NSDictionary
+            let username = value?["name"] as? String ?? "vazio"
+            //let user = Usuario(0)
+            print(username)
+        })
+        {
+            (error) in
+            print(error.localizedDescription)
+        }
         
-        //DatabaseHandle = databaseRefer.child("usuario").observe(.childAdded, with: {(data) in let })
         if login != "rgeiss"
         {
             retorno = false
