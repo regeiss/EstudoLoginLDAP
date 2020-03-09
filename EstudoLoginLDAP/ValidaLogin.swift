@@ -21,8 +21,10 @@ public class Login
         databaseRefer.child("usuarios").child(login).observeSingleEvent(of: .value, with: {(snapshot) in
             let value = snapshot.value as? NSDictionary
             let username = value?["name"] as? String ?? "vazio"
+            let senha = value?["senha"] as? Int64 ?? 0
             //let user = Usuario(0)
             print(username)
+            print(senha)
         })
         {
             (error) in
