@@ -15,10 +15,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate
 {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool
     {
-        // Definicoes do Firebase Realm Database
-        var databaseRefer: DatabaseReference!
+        // Definicoes do Firebase  Database
+        //var databaseRefer: DatabaseReference!
         FirebaseApp.configure()
-
+        // Habilitar para ter persistencia de dados offline.
+        //Database.database().isPersistenceEnabled = true
         return true
     }
 
