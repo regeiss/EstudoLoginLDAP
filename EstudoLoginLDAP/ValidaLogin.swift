@@ -17,19 +17,46 @@ public class Login
         let databaseRefer = Database.database().reference()
         var retorno: Bool = true
         
+        // Ajustes para data
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .full
+        dateFormatter.timeStyle = .full
+        dateFormatter.locale = Locale(identifier: "pt_BR")
+        
         // Le Firebase
         databaseRefer.child("usuarios").child(login).observeSingleEvent(of: .value, with: {(snapshot) in
             let value = snapshot.value as? NSDictionary
             let username = value?["name"] as? String ?? "vazio"
             let senha = value?["senha"] as? Int64 ?? 0
-            //let user = Usuario(0)
-            print(username)
-            print(senha)
-        })
+            let email = value?["email"] as? String ?? "vazio"
+            let dataCriado = value?["criadoEm"] as? Date ?? Date()
+            let dateString = dateFormatter.string(from: dataCriado)
+            print(username + " " + String(senha) + " " + email  + " " + dateString)
+            print(dataCriado)
+            }
+        )
         {
             (error) in
             print(error.localizedDescription)
         }
+        
+        // Grava hora de login
+        let dataCriado = Date()
+        let dataCriadoString = dateFormatter.string(from: dataCriado)
+        
+        //databaseRefer.child("usuarios").child(login).setValue(["ultimoLogin": dataCriadoString])
+        databaseRefer.child("usuarios").child(login).setValue(["ultimoLogin": dataCriadoString])
+        {
+            (error:Error?, ref:DatabaseReference) in
+            if let error = error {
+                print("Erro atualizando: \(error)")
+            }
+            else
+            {
+                print("Atualizado")
+            }
+        }
+        
         
         if login != "rgeiss"
         {

@@ -66,6 +66,7 @@
 		E1C25CB623A2CFB300129DC6 /* EstudoLoginLDAP.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EstudoLoginLDAP.xcdatamodel; sourceTree = "<group>"; };
 		E1CF61242412C3A800839C59 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E1CF61262416DDC600839C59 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
+		E1CF61282417E0F800839C59 /* EstudoLoginLDAP.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EstudoLoginLDAP.entitlements; sourceTree = "<group>"; };
 		E1F4FAE023A978400070CB1B /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		E1F4FAE923ABBAD40070CB1B /* AjudaVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AjudaVC.swift; sourceTree = "<group>"; };
 		E1F4FAEC23AD30970070CB1B /* Extensoes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensoes.swift; sourceTree = "<group>"; };
@@ -118,6 +119,7 @@
 		E18D82F02396AB45008C108E /* EstudoLoginLDAP */ = {
 			isa = PBXGroup;
 			children = (
+				E1CF61282417E0F800839C59 /* EstudoLoginLDAP.entitlements */,
 				E1CF61262416DDC600839C59 /* README.md */,
 				E1F4FAF223B267F90070CB1B /* Rede */,
 				E1F4FAEB23AD04680070CB1B /* LDAP */,
@@ -485,6 +487,7 @@
 			baseConfigurationReference = E62F3900B3866C5A669481C1 /* Pods-EstudoLoginLDAP.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = EstudoLoginLDAP/EstudoLoginLDAP.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4DLN7FPJ74;
 				INFOPLIST_FILE = EstudoLoginLDAP/Info.plist;
@@ -504,6 +507,7 @@
 			baseConfigurationReference = 8316B351769BBDE1DA271140 /* Pods-EstudoLoginLDAP.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = EstudoLoginLDAP/EstudoLoginLDAP.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4DLN7FPJ74;
 				INFOPLIST_FILE = EstudoLoginLDAP/Info.plist;

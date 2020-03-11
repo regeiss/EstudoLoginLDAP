@@ -76,8 +76,8 @@ class ViewController: UIViewController, UITextFieldDelegate, NetworkCheckObserve
         txtSenha.backgroundColor = UIColor.systemGray6
         txtUsuario.returnKeyType = .next
         
-        deletaUsuario()
-        buscaUsuario()
+        //deletaUsuario()
+        //buscaUsuario()
     }
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool
@@ -271,7 +271,6 @@ class ViewController: UIViewController, UITextFieldDelegate, NetworkCheckObserve
             {
                 self.usuario.forEach({print($0.nome!)})
             }
-            //print (self.usuario.count)
         }
         catch
         {

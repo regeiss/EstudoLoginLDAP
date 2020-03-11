@@ -8,6 +8,8 @@
 
 import Foundation
 
+
+// Usado para fins de teste. 
 struct Album: Codable
 {
     var userId: Int
