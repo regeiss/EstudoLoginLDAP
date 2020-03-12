@@ -13,24 +13,18 @@ public class Login
 {
     func validaUsuario(login: String, senha: String) -> Bool
     {
-        // Le JSON no Firebase
-        let databaseRefer = Database.database().reference()
+        // MARK: - Propriedades
+        var utilitarios: Utilitarios = Utilitarios()
         var retorno: Bool = true
-        
-        // Ajustes para data
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateStyle = .full
-        dateFormatter.timeStyle = .full
-        dateFormatter.locale = Locale(identifier: "pt_BR")
-        
         // Le Firebase
+        let databaseRefer = Database.database().reference()
         databaseRefer.child("usuarios").child(login).observeSingleEvent(of: .value, with: {(snapshot) in
             let value = snapshot.value as? NSDictionary
             let username = value?["name"] as? String ?? "vazio"
             let senha = value?["senha"] as? Int64 ?? 0
             let email = value?["email"] as? String ?? "vazio"
             let dataCriado = value?["criadoEm"] as? Date ?? Date()
-            let dateString = dateFormatter.string(from: dataCriado)
+            let dateString = utilitarios.dataFormatada
             print(username + " " + String(senha) + " " + email  + " " + dateString)
             print(dataCriado)
             }
@@ -41,22 +35,20 @@ public class Login
         }
         
         // Grava hora de login
-        let dataCriado = Date()
-        let dataCriadoString = dateFormatter.string(from: dataCriado)
+//        let dataCriado = Date()
+//        let dataCriadoString = dateFormatter.string(from: dataCriado)
         
-        //databaseRefer.child("usuarios").child(login).setValue(["ultimoLogin": dataCriadoString])
-        databaseRefer.child("usuarios").child(login).setValue(["ultimoLogin": dataCriadoString])
-        {
-            (error:Error?, ref:DatabaseReference) in
-            if let error = error {
-                print("Erro atualizando: \(error)")
-            }
-            else
-            {
-                print("Atualizado")
-            }
-        }
-        
+//        databaseRefer.child("usuarios").child(login).setValue(["ultimoLogin": dataCriadoString])
+//        {
+//            (error:Error?, ref:DatabaseReference) in
+//            if let error = error {
+//                print("Erro atualizando: \(error)")
+//            }
+//            else
+//            {
+//                print("Atualizado")
+//            }
+//        }
         
         if login != "rgeiss"
         {
