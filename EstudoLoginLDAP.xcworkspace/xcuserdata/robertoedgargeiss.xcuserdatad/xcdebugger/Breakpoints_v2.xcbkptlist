@@ -3,4 +3,54 @@
    uuid = "DC164D31-3F61-4BB8-84B8-148716A4A429"
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "003A7DC3-268D-4417-B0D2-010DAEBA596B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EstudoLoginLDAP/Login.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "validaUsuario(login:senha:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "003A7DC3-268D-4417-B0D2-010DAEBA596B - b7ec13ec2ece5de2"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "EstudoLoginLDAP.Login.validaUsuario(login: Swift.String, senha: Swift.String) -&gt; Swift.Bool"
+                  moduleName = "EstudoLoginLDAP"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/robertoedgargeiss/Projetos/EstudoLoginLDAP/EstudoLoginLDAP/Login.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "226">
+               </Location>
+               <Location
+                  uuid = "003A7DC3-268D-4417-B0D2-010DAEBA596B - f168a1863f3b26db"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__C.FIRDataSnapshot) -&gt; () in EstudoLoginLDAP.Login.validaUsuario(login: Swift.String, senha: Swift.String) -&gt; Swift.Bool"
+                  moduleName = "EstudoLoginLDAP"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/robertoedgargeiss/Projetos/EstudoLoginLDAP/EstudoLoginLDAP/Login.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "245">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

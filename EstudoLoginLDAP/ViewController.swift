@@ -12,7 +12,6 @@ import CoreData
  
 class ViewController: UIViewController, UITextFieldDelegate, NetworkCheckObserver
 {
-
     // MARK: - Campos da tela
     @IBOutlet weak var txtUsuario: UITextField!
     @IBOutlet weak var btnLogin: UIButton!
@@ -229,19 +228,24 @@ class ViewController: UIViewController, UITextFieldDelegate, NetworkCheckObserve
         self.title = title
 
         topView?.removeFromSuperview()
-        switch menuType {
-        case .perfil:
-            guard let viewVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "PerfilVC") as? PerfilVC
-                else {return}
-                navigationController?.pushViewController(viewVC, animated: true)
+        switch menuType
+        {
+            case .perfil:
+                guard let viewVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "PerfilVC") as? PerfilVC
+                    else {return}
+                    navigationController?.pushViewController(viewVC, animated: true)
             
-        case .ajuda:
-            guard let viewVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "AjudaVC") as? AjudaVC
-                else {return}
-                navigationController?.pushViewController(viewVC, animated: true)
+            case .logout:
+                let login = Login()
+                login.atualizaStatusLogin(status: "nao")
+                
+            case .ajuda:
+                guard let viewVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "AjudaVC") as? AjudaVC
+                    else {return}
+                    navigationController?.pushViewController(viewVC, animated: true)
 
-        default:
-            break
+            default:
+                break
         }
     }
 

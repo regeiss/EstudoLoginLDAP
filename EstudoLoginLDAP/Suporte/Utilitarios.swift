@@ -12,8 +12,9 @@ public class Utilitarios
 {
 
     private let dateFormatter = DateFormatter()
+    let usuario = Usuario()
     
-    var dataFormatada: String
+    var dataLoginFormatada: String
     {
         get
         {
@@ -28,6 +29,19 @@ public class Utilitarios
         }
     }
     //
-    
+    var dataCriadoFormatada: String
+    {
+        get
+        {
+            dateFormatter.dateStyle = .full
+            dateFormatter.timeStyle = .full
+            dateFormatter.locale = Locale(identifier: "pt_BR")
+            return dateFormatter.string(from: usuario.dataCriado!)
+        }
+        set
+        {
+            //
+        }
+    }
     
 }
